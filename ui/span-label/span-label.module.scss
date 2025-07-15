@@ -1,0 +1,11 @@
+.span {
+  padding: 8px 16px;
+  width: fit-content;
+  border-radius: 50px;
+  background: var(--light100);
+  border: 1px solid var(--light200);
+
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark700);
+}

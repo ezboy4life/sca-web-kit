@@ -1,0 +1,114 @@
+.accordion {
+  width: 100%;
+  min-height: 90px;
+
+  color: var(--neutral500);
+  font-size: 16px;
+  background: var(--neutral100);
+  border-radius: 16px;
+  padding: 32px;
+
+  overflow: hidden;
+
+  @media (max-width: 425px) {
+    padding: 24px;
+  }
+
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 64px;
+
+    @media (max-width: 425px) {
+      gap: 32px;
+    }
+
+    @media (max-width: 375px) {
+      gap: 24px;
+      font-size: 16px;
+    }
+
+    .trigger {
+      min-width: 32px;
+      min-height: 32px;
+      background: var(--auxiliary-orange);
+      border: none;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+
+      .plus,
+      .minus {
+        position: absolute;
+        transition: opacity 0.3s;
+      }
+    }
+
+    .trigger[data-state="open"] {
+      .plus {
+        opacity: 0;
+      }
+
+      .minus {
+        opacity: 1;
+      }
+    }
+
+    .trigger[data-state="closed"] {
+      .plus {
+        opacity: 1;
+      }
+
+      .minus {
+        opacity: 0;
+      }
+    }
+  }
+
+  .answer {
+    font-size: 14px;
+    color: var(--neutral400);
+    margin-top: 16px;
+  }
+
+  .answer[data-state="open"] {
+    animation: slideDown 300ms ease-in-out;
+  }
+
+  .answer[data-state="closed"] {
+    animation: slideUp 300ms ease-out;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+    opacity: 0;
+    margin-top: 0;
+  }
+
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+    margin-top: 16px;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    height: var(--radix-accordion-content-height);
+    margin-top: 16px;
+  }
+
+  to {
+    height: 0;
+    opacity: 0;
+    margin-top: 0;
+  }
+}

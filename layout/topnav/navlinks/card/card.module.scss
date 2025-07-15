@@ -1,0 +1,34 @@
+.card {
+  padding: 16px 0 16px 16px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 12px;
+  font-variation-settings: 'wght' 400;
+  cursor: pointer;
+  transition: font-variation-settings 0.3s;
+}
+
+.card:hover {
+  font-variation-settings: 'wght' 500;
+}
+
+.card-icon {
+  color: transparent;
+  transition: color 0.3s;
+}
+
+.icon {
+  color: var(--primary);
+}
+
+.card:hover .card-icon {
+  color: var(--primary);
+}
+
+.label-icon-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 6px;
+}

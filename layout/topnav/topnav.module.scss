@@ -1,0 +1,56 @@
+.navbar {
+  height: 112px;
+  width: 100%;
+  padding: 0 112px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+
+  @media (max-width: 1330px) {
+    padding: 0 64px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 24px;
+  }
+
+  .sca-logo {
+    @media (max-width: 1024px) {
+      width: 50px;
+    }
+  }
+}
+
+.navlinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  @media (max-width: 1330px) {
+    gap: 20px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.plans-link,
+.blog-link {
+  transition: color 0.3s;
+}
+
+.plans-link:hover,
+.blog-link:hover {
+  color: var(--auxiliary-orange);
+}

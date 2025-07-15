@@ -1,0 +1,63 @@
+.support-sticky-button {
+  cursor: pointer;
+
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+
+  z-index: 5;
+  border-radius: 8px 8px 2px 8px;
+  padding: 12px;
+  background: var(--auxiliary-orange);
+
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  transition: background .3s;
+
+  @media (max-width: 425px) {
+    // TODO: Ver se vai fazer isso mobile (insany não fez)
+    display: none;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .person-wrapper {
+      overflow: hidden;
+      position: relative;
+
+      width: 32px;
+      height: 32px;
+
+      background: white;
+      border-radius: 50%;
+
+      .person {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+
+      }
+    }
+
+    .text {
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.support-sticky-button:hover {
+  background: var(--auxiliary-red);
+}

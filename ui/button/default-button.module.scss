@@ -1,0 +1,22 @@
+.button {
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: var(--auxiliary-orange);
+  cursor: pointer;
+  padding: 16px;
+  color: #fff;
+  font-size: 16px;
+  font-variation-settings: 'wght' 600;
+  transition: background 0.3s, border 0.3s, opacity 0.3s;
+
+  .icon {
+    width: 16;
+    height: 16px;
+    position: absolute;
+  }
+}
+
+.button:hover {
+  background: var(--auxiliary-red);
+}
