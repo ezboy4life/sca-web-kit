@@ -18,8 +18,11 @@ export { default as IndexHeader } from './components/shared/index-header/index-h
 export { default as FeatureCard } from './components/shared/feature-card/feature-card';
 export { default as SuccessCases } from './components/shared/success-cases/success-cases';
 export { default as FooterBanner } from './components/shared/footer-banner/footer-banner';
+export { default as SupportStickyButton } from './components/shared/support-sticky-button/support-sticky-button';
 export { default as FooterBannerAutoplayer } from './components/shared/footer-banner-autoplayer/footer-banner-autoplayer';
+export { default as SuccessCasesSwiper } from './components/shared/success-cases/success-cases-swiper/success-cases-swiper';
 export { default as SuccessCaseCard } from './components/shared/success-cases/success-cases-swiper/success-case-card/success-case-card'
+
 
 export { default as Footer } from './components/layout/footer/footer';
 export { default as TopNav } from './components/layout/topnav/topnav';
