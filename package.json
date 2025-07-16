@@ -9,7 +9,7 @@
   },
   "private": true,
   "peerDependencies": {
-    "next": "15.2.2",
+    "next": "^15.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sass": "^1.88.0"
