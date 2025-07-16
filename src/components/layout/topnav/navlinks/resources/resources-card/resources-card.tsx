@@ -1,6 +1,9 @@
-import { IconProps } from '@phosphor-icons/react';
 import styles from './resources-card.module.scss';
-import { IconWithBackground } from '@/components';
+
+import IconWithBackground from '../../../../../ui/icon-with-background/icon-with-background';
+
+import { IconProps } from '@phosphor-icons/react';
+
 
 export default function ResourcesCard({
   title,

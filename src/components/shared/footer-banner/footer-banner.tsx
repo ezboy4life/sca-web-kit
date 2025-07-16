@@ -1,5 +1,5 @@
 import styles from './footer-banner.module.scss';
-import { montserrat } from '@/fonts';
+import { montserrat } from '../../../fonts';
 
 import Image from 'next/image';
 import FeatureCard from '../feature-card/feature-card';

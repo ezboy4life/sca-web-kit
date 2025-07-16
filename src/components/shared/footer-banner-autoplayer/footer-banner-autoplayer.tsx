@@ -1,11 +1,11 @@
 import styles from './footer-banner-autoplayer.module.scss';
-import { montserrat } from '@/fonts';
+import { montserrat } from '../../../fonts';
 
 import Image from 'next/image';
-import Autoplayer from '../autoplayer/autoplayer';
-import FeatureCard from '../feature-card/feature-card';
 
-import { Button } from '@/components';
+import FeatureCard from '../feature-card/feature-card';
+import Autoplayer from '../autoplayer/autoplayer';
+import Button from '../../ui/button/button';
 
 export default function FooterBannerAutoplayer(
   {

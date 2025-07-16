@@ -1,11 +1,13 @@
 import styles from './card.module.scss';
-import { ArrowUpRight, IconProps } from '@phosphor-icons/react';
-import { IconWithBackground } from '@/components';
+
+import IconWithBackground from '../../../../ui/icon-with-background/icon-with-background';
+
+import { ArrowUpRightIcon, IconProps } from '@phosphor-icons/react';
 
 export default function Card({
   label,
-  icon: Icon,
   iconSize = 22,
+  icon: Icon,
 }: {
   label: string;
   icon: React.ComponentType<IconProps> | string,
@@ -16,7 +18,7 @@ export default function Card({
       <IconWithBackground icon={Icon} iconClassName={styles['icon']} iconSize={iconSize} />
       <div className={styles['label-icon-wrapper']}>
         <p>{label}</p>
-        <ArrowUpRight weight='bold' size={14} className={styles['card-icon']} />
+        <ArrowUpRightIcon weight='bold' size={14} className={styles['card-icon']} />
       </div>
     </div>
   );

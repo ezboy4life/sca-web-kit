@@ -1,7 +1,9 @@
 import styles from './feature-card.module.scss';
 
-import React from 'react';
-import { Title, Subtitle, SpanLabel, Button } from '@/components';
+import SpanLabel from '../../ui/span-label/span-label';
+import Subtitle from '../../ui/subtitle/subtitle';
+import Button from '../../ui/button/button';
+import Title from '../../ui/title/title';
 
 interface FeatureCardProps {
   spanLabel?: string;

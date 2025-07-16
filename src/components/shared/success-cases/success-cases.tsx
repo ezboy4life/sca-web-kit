@@ -1,7 +1,9 @@
 import styles from './success-cases.module.scss';
 
 import SuccessCasesSwiper from './success-cases-swiper/success-cases-swiper';
-import { Button, FeatureCard, Stacks } from '@/components';
+import FeatureCard from '../feature-card/feature-card';
+import Button from '../../ui/button/button';
+import Stacks from '../../ui/stacks/stacks';
 
 export default function SuccessCases() {
 

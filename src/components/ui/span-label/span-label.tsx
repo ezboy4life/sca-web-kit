@@ -1,5 +1,6 @@
 import styles from './span-label.module.scss';
-import { montserrat } from '@/fonts';
+
+import { montserrat } from '../../../fonts';
 
 export default function SpanLabel({
   label,

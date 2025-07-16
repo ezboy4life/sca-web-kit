@@ -1,5 +1,7 @@
 import styles from './indexed-section-button.module.scss';
 
+import { IndexedSection } from '../../../../types';
+
 export default function IndexedSectionButton(
   {
     activeSectionId,

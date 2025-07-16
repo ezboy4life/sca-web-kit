@@ -2,11 +2,9 @@
 
 import styles from './index-header.module.scss';
 import { useEffect, useState } from 'react';
-import IndexedSectionButton from './indexed-section-button/indexed-section-button';
 
-type IndexHeaderProps = {
-  sections: IndexedSection[];
-}
+import IndexedSectionButton from './indexed-section-button/indexed-section-button';
+import { IndexHeaderProps } from '../../../types';
 
 export default function IndexHeader({ sections }: IndexHeaderProps) {
   const [activeSection, setActiveSection] = useState('');

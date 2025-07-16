@@ -3,11 +3,12 @@
 import styles from './success-cases-swiper.module.scss';
 import { useState } from 'react';
 
+import SuccessCaseCard from './success-case-card/success-case-card';
+import Button from '../../../ui/button/button';
+
 import { CaretRightIcon } from '@phosphor-icons/react';
-import { Button } from '@/components';
 
 import Image from 'next/image';
-import SuccessCaseCard from './success-case-card/success-case-card';
 
 export default function SuccessCasesSwiper(
   {

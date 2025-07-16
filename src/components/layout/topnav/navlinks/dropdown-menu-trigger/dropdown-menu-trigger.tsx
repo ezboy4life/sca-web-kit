@@ -1,7 +1,7 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import styles from './dropdown-menu-trigger.module.scss';
-import { inter } from '@/fonts';
-import { CaretDown } from '@phosphor-icons/react';
+import { inter } from '../../../../../fonts';
+import { CaretDownIcon } from '@phosphor-icons/react';
 
 export default function DropdownMenuTrigger({
   label,
@@ -26,7 +26,7 @@ export default function DropdownMenuTrigger({
     >
       <p className={inter.className}>{label}</p>
 
-      <CaretDown
+      <CaretDownIcon
         color='var(--light500)'
         size={16}
         className={`${styles['dropdown-trigger-icon']} ${open ? styles['dropdown-trigger-icon-open'] : ''}`}

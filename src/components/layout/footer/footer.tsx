@@ -3,8 +3,16 @@ import styles from './footer.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { EnvelopeIcon, FacebookLogoIcon, InstagramLogoIcon, PhoneIncomingIcon, YoutubeLogoIcon } from '@phosphor-icons/react/dist/ssr';
-import { Button, IconWithBackground } from '@/components';
+import Button from '../../ui/button/button';
+import IconWithBackground from '../../ui/icon-with-background/icon-with-background';
+
+import {
+  EnvelopeIcon,
+  FacebookLogoIcon,
+  InstagramLogoIcon,
+  PhoneIncomingIcon,
+  YoutubeLogoIcon
+} from '@phosphor-icons/react/dist/ssr';
 
 export default function Footer() {
   const currentYear: number = new Date().getFullYear();

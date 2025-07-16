@@ -2,7 +2,8 @@
 
 import styles from './navtrailing.module.scss';
 
-import { Button } from '@/components';
+import Button from '../../../ui/button/button';
+
 import { UserCircleIcon } from '@phosphor-icons/react';
 
 export default function NavTrailing() {

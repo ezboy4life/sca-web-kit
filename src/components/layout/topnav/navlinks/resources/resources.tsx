@@ -3,10 +3,10 @@
 import styles from './resources.module.scss';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 
+import Button from '../../../../ui/button/button';
 import ResourcesCard from './resources-card/resources-card';
 import DropdownMenuTrigger from '../dropdown-menu-trigger/dropdown-menu-trigger';
 
-import { Button } from '@/components';
 import { ArrowRightIcon, ClipboardTextIcon, CoinsIcon, CreditCardIcon, FileTextIcon, MoneyIcon, StackIcon } from '@phosphor-icons/react';
 
 import Link from 'next/link';

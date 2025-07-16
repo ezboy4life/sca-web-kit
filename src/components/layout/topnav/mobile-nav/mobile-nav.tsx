@@ -1,10 +1,19 @@
 import styles from './mobile-nav.module.scss';
+
 import * as Dialog from '@radix-ui/react-dialog';
-import { CaretDownIcon, ListIcon, UserCircleIcon, XIcon } from '@phosphor-icons/react/dist/ssr';
+
 import Image from 'next/image';
+
 import NavAccordion from './nav-accordion/nav-accordion';
 import NavAccordionLink from './nav-accordion/nav-accordion-link/nav-accordion-link';
-import { Button } from '@/components';
+
+import {
+  CaretDownIcon,
+  ListIcon,
+  UserCircleIcon,
+  XIcon
+} from '@phosphor-icons/react/dist/ssr';
+import Button from '../../../ui/button/button';
 
 export default function MobileNav() {
   return (

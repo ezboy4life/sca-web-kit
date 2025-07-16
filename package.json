@@ -1,6 +1,11 @@
 {
   "name": "sca-web-kit",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
   "private": true,
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
@@ -22,11 +27,6 @@
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
     "typescript": "^5"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@vercel/speed-insights"
-    ]
   }
 }
 
