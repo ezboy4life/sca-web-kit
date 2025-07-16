@@ -4,8 +4,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "prepare": "tsc"
+    "build": "tsc && cpy 'src/**/*.scss' dist/ --parents",
+    "prepare": "pnpm run build"
   },
   "private": true,
   "dependencies": {
@@ -25,9 +25,9 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cpy-cli": "^5.0.0",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
     "typescript": "^5"
   }
 }
-
