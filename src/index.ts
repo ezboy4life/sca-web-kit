@@ -1,3 +1,5 @@
+import './styles/variables.scss';
+
 export { default as Decal } from './components/ui/decal/decal';
 export { default as Title } from './components/ui/title/title';
 export { default as Stacks } from './components/ui/stacks/stacks';
