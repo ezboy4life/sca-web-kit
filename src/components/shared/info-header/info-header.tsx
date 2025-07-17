@@ -1,11 +1,11 @@
-import styles from './feature-card.module.scss';
+import styles from './info-header.module.scss';
 
-import SpanLabel from '../../ui/span-label/span-label';
+import TagLabel from '../../ui/tag-label/tag-label';
 import Subtitle from '../../ui/subtitle/subtitle';
 import Button from '../../ui/button/button';
 import Title from '../../ui/title/title';
 
-interface FeatureCardProps {
+interface InfoHeaderProps {
   spanLabel?: string;
   title: string;
   subtitle?: string;
@@ -17,7 +17,7 @@ interface FeatureCardProps {
   dark?: boolean;
 }
 
-export default function FeatureCard({
+export default function InfoHeader({
   spanLabel,
   title,
   subtitle,
@@ -26,10 +26,10 @@ export default function FeatureCard({
   titleClassName = '',
   subtitleClassName = '',
   dark = false,
-}: FeatureCardProps) {
+}: InfoHeaderProps) {
   return (
     <div className={`${styles['feature-card']} ${className}`}>
-      {spanLabel && <SpanLabel label={spanLabel} dark={dark} />}
+      {spanLabel && <TagLabel label={spanLabel} dark={dark} />}
 
       <Title className={titleClassName} text={title} dark={dark} />
 

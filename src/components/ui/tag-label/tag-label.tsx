@@ -1,8 +1,8 @@
-import styles from './span-label.module.scss';
+import styles from './tag-label.module.scss';
 
 import { montserrat } from '../../../fonts';
 
-export default function SpanLabel({
+export default function TagLabel({
   label,
   className = '',
   dark = false,
@@ -16,6 +16,7 @@ export default function SpanLabel({
     background: 'var(--dark800)',
     color: 'white',
   }
+
   return (
     <span
       style={spanDarkStyle}
