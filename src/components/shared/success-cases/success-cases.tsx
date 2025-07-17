@@ -15,7 +15,7 @@ export default function SuccessCases() {
         <div className={styles['success-cases-title']}>
           <InfoHeader
             className={styles['title']}
-            spanLabel='CASES DE SUCESSO'
+            tagLabel='CASES DE SUCESSO'
             title={'Essas pessoas confiam no nosso trabalho'}
           />
 

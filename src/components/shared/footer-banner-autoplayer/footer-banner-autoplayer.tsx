@@ -18,7 +18,7 @@ export default function FooterBannerAutoplayer(
     <div className={`${styles['footer-banner-autoplayer']} ${className}`}>
       <div className={styles['left']}>
         <InfoHeader
-          spanLabel='SISTEMA COMPLETO'
+          tagLabel='SISTEMA COMPLETO'
           title={'Plano ideal para o seu negócio'}
           className={styles['info-header']}
           dark

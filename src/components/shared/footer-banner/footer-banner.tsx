@@ -10,7 +10,7 @@ export default function FooterBanner() {
   return (
     <div className={styles['footer-banner']}>
       <InfoHeader
-        spanLabel='ILIMITADO'
+        tagLabel='ILIMITADO'
         title={'Não importa quantos alunos e alunas você vai ter, o preço não muda.'}
         buttonLabel='Conheça agora!'
         className={styles['footer-banner-info-header']}

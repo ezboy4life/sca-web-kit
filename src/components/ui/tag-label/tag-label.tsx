@@ -11,15 +11,15 @@ export default function TagLabel({
   className?: string,
   dark?: boolean,
 }) {
-  const spanDarkStyle = !dark ? {} : {
+  const darkStyle = !dark ? {} : {
     border: '1px solid var(--dark900)',
     background: 'var(--dark800)',
     color: 'white',
   }
 
   return (
-    <span
-      style={spanDarkStyle}
+    <div
+      style={darkStyle}
       className={`
         ${montserrat.className}
         ${className} 
@@ -27,6 +27,6 @@ export default function TagLabel({
       `}
     >
       {label}
-    </span>
+    </div>
   )
 }

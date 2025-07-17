@@ -6,7 +6,7 @@ import Button from '../../ui/button/button';
 import Title from '../../ui/title/title';
 
 interface InfoHeaderProps {
-  spanLabel?: string;
+  tagLabel?: string;
   title: string;
   subtitle?: string;
   iconSubtitle?: string;
@@ -18,7 +18,7 @@ interface InfoHeaderProps {
 }
 
 export default function InfoHeader({
-  spanLabel,
+  tagLabel,
   title,
   subtitle,
   buttonLabel,
@@ -29,7 +29,7 @@ export default function InfoHeader({
 }: InfoHeaderProps) {
   return (
     <div className={`${styles['info-header']} ${className}`}>
-      {spanLabel && <TagLabel label={spanLabel} dark={dark} />}
+      {tagLabel && <TagLabel label={tagLabel} dark={dark} />}
 
       <Title className={titleClassName} text={title} dark={dark} />
 
