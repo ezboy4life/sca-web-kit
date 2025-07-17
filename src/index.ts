@@ -25,6 +25,5 @@ export { default as FooterBannerAutoplayer } from './components/shared/footer-ba
 export { default as SuccessCasesSwiper } from './components/shared/success-cases/success-cases-swiper/success-cases-swiper';
 export { default as SuccessCaseCard } from './components/shared/success-cases/success-cases-swiper/success-case-card/success-case-card'
 
-// Layout (TODO: Ver se pode ser removido)
+// Layout
 export { default as Footer } from './components/layout/footer/footer';
-export { default as TopNav } from './components/layout/topnav/topnav';
