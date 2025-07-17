@@ -41,7 +41,7 @@ export default function Phone({
                 src={'/phone/system-bar.svg'}
                 width={172}
                 height={7}
-                alt='TODO'
+                alt='Image dos ícones de um celular'
                 className={styles['status']}
               />
               <div className={`${styles['camera']} ${cameraClassName}`}>
@@ -71,7 +71,7 @@ export default function Phone({
                 </div>
                 <Image
                   src={'/animated/rosca-direta.webp'}
-                  alt={'TODO'}
+                  alt={'Animação do exercício Rosca Direta'}
                   width={130}
                   height={130}
                   unoptimized

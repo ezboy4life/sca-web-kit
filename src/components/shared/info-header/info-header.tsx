@@ -28,7 +28,7 @@ export default function InfoHeader({
   dark = false,
 }: InfoHeaderProps) {
   return (
-    <div className={`${styles['feature-card']} ${className}`}>
+    <div className={`${styles['info-header']} ${className}`}>
       {spanLabel && <TagLabel label={spanLabel} dark={dark} />}
 
       <Title className={titleClassName} text={title} dark={dark} />

@@ -2,18 +2,18 @@ import styles from './footer-banner.module.scss';
 import { montserrat } from '../../../fonts';
 
 import Image from 'next/image';
-import FeatureCard from '../feature-card/feature-card';
+import InfoHeader from '../info-header/info-header';
 
 import { BrowsersIcon, CreditCardIcon, TimerIcon } from '@phosphor-icons/react/dist/ssr';
 
 export default function FooterBanner() {
   return (
     <div className={styles['footer-banner']}>
-      <FeatureCard
+      <InfoHeader
         spanLabel='ILIMITADO'
         title={'Não importa quantos alunos e alunas você vai ter, o preço não muda.'}
         buttonLabel='Conheça agora!'
-        className={styles['footer-banner-feature-card']}
+        className={styles['footer-banner-info-header']}
         dark
       />
 

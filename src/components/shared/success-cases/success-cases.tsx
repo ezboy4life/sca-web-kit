@@ -1,7 +1,7 @@
 import styles from './success-cases.module.scss';
 
 import SuccessCasesSwiper from './success-cases-swiper/success-cases-swiper';
-import FeatureCard from '../feature-card/feature-card';
+import InfoHeader from '../info-header/info-header';
 import Button from '../../ui/button/button';
 import Stacks from '../../ui/stacks/stacks';
 
@@ -13,7 +13,7 @@ export default function SuccessCases() {
 
       <div className={styles['success-cases-wrapper']}>
         <div className={styles['success-cases-title']}>
-          <FeatureCard
+          <InfoHeader
             className={styles['title']}
             spanLabel='CASES DE SUCESSO'
             title={'Essas pessoas confiam no nosso trabalho'}

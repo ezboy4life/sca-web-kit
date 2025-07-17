@@ -45,7 +45,7 @@ export default function Footer() {
               <div className={styles['etc-content']}>
                 <p className={styles['title']}>Conteúdo</p>
                 <a href='TODO' target='_blank'>Blog</a>
-                <a href='TODO' target='_blank'>Central de Ajuda</a>
+                <a href='https://app.sistemasca.com/ajuda/' target='_blank'>Central de Ajuda</a>
               </div>
               <div className={styles['etc-transparency']}>
                 <p className={styles['title']}>Transparência</p>

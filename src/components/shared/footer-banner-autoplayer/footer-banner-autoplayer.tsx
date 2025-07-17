@@ -3,7 +3,7 @@ import { montserrat } from '../../../fonts';
 
 import Image from 'next/image';
 
-import FeatureCard from '../feature-card/feature-card';
+import InfoHeader from '../info-header/info-header';
 import Autoplayer from '../autoplayer/autoplayer';
 import Button from '../../ui/button/button';
 
@@ -17,10 +17,10 @@ export default function FooterBannerAutoplayer(
   return (
     <div className={`${styles['footer-banner-autoplayer']} ${className}`}>
       <div className={styles['left']}>
-        <FeatureCard
+        <InfoHeader
           spanLabel='SISTEMA COMPLETO'
           title={'Plano ideal para o seu negócio'}
-          className={styles['feature-card']}
+          className={styles['info-header']}
           dark
         />
 
