@@ -16,10 +16,11 @@ export { default as IconWithBackground } from './components/ui/icon-with-backgro
 // Shared
 export { default as Phone } from './components/shared/phone/phone';
 export { default as AutoPlayer } from './components/shared/autoplayer/autoplayer';
-export { default as IndexHeader } from './components/shared/index-header/index-header';
 export { default as InfoHeader } from './components/shared/info-header/info-header';
+export { default as IndexHeader } from './components/shared/index-header/index-header';
 export { default as SuccessCases } from './components/shared/success-cases/success-cases';
 export { default as FooterBanner } from './components/shared/footer-banner/footer-banner';
+export { default as NewsletterStrip } from './components/shared/newsletter-strip/newsletter-strip';
 export { default as SupportStickyButton } from './components/shared/support-sticky-button/support-sticky-button';
 export { default as FooterBannerAutoplayer } from './components/shared/footer-banner-autoplayer/footer-banner-autoplayer';
 export { default as SuccessCasesSwiper } from './components/shared/success-cases/success-cases-swiper/success-cases-swiper';
