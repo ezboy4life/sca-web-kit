@@ -9,16 +9,19 @@ export default function Title(
     fontSize,
     fontWeight,
     dark = false,
+    id,
   }: {
     text: string,
     className?: string,
     fontSize?: string,
     fontWeight?: string,
-    dark?: boolean
+    dark?: boolean,
+    id?: string,
   }
 ) {
   return (
     <p
+      id={id}
       className={`${styles['title']} ${className} ${montserrat.className}`}
       style={{
         fontSize: fontSize,
