@@ -67,7 +67,10 @@ export default function Button({
       aria-label={ariaLabel}
       type={type}
       className={`${styles['button']} ${className}`}
-      style={{ borderRadius: round ? '50%' : '8px' }}
+      style={{
+        borderRadius: round ? '50%' : '8px',
+        padding: round ? '16px' : '16px 42px',
+      }}
     >
       {LeadingIcon && (
         // Ícone da esquerda
