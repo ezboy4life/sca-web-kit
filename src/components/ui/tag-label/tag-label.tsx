@@ -46,7 +46,7 @@ export default function TagLabel({
   return (
     <div
       style={darkStyle}
-      className={`${styles['span']} ${montserrat.className} ${className}`}
+      className={`${styles['tag-label']} ${montserrat.className} ${className}`}
     >
       {LeadingIcon && (
         // Ícone da esquerda
