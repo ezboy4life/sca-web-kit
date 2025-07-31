@@ -69,7 +69,7 @@ export default function Button({
       className={`${styles['button']} ${className}`}
       style={{
         borderRadius: round ? '50%' : '8px',
-        padding: round ? '16px' : '16px 42px',
+        padding: round ? '8px' : '16px 42px',
       }}
     >
       {LeadingIcon && (
