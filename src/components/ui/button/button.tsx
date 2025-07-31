@@ -1,55 +1,105 @@
 import styles from './default-button.module.scss';
 import { inter } from '../../../fonts';
-
 import { IconProps, IconWeight } from '@phosphor-icons/react';
+
+interface ButtonProps {
+  label?: string,
+  className?: string,
+
+  icon?: React.ComponentType<IconProps>,
+  iconSize?: number,
+  iconColor?: string,
+  iconWeight?: IconWeight,
+  iconClassName?: string,
+
+  leadingIcon?: React.ComponentType<IconProps>,
+  leadingIconSize?: number,
+  leadingIconColor?: string,
+  leadingIconWeight?: IconWeight,
+  leadingIconClassName?: string,
+
+  trailingIcon?: React.ComponentType<IconProps>,
+  trailingIconSize?: number,
+  trailingIconColor?: string,
+  trailingIconWeight?: IconWeight,
+  trailingIconClassName?: string,
+
+  type?: "button" | "submit" | "reset",
+  round?: boolean,
+  onClick?: () => void,
+  ariaLabel?: string,
+}
 
 export default function Button({
   label,
-  iconColor = 'white',
+  className,
+
+  // Ícone central
+  icon: Icon,
+  iconSize,
+  iconColor,
+  iconWeight,
   iconClassName,
-  className = '',
-  leadingIconClassName = '',
-  leadingIconSize = 16,
-  leadingIconWeight = 'regular',
-  ariaLabel,
+
+  // Ícone da esquerda
+  leadingIcon: LeadingIcon,
+  leadingIconSize,
+  leadingIconColor,
+  leadingIconWeight,
+  leadingIconClassName,
+
+  // Ícone da direita 
+  trailingIcon: TrailingIcon,
+  trailingIconSize,
+  trailingIconColor,
+  trailingIconWeight,
+  trailingIconClassName,
+
+  // Etc
   type,
   round = false,
-  icon: Icon,
-  leadingIcon: LeadingIcon,
   onClick,
-}: {
-  label?: string,
-  icon?: React.ComponentType<IconProps>,
-  iconColor?: string,
-  iconClassName?: string,
-  className?: string,
-  leadingIconClassName?: string,
-  leadingIconSize?: number,
-  leadingIconWeight?: IconWeight,
-  type?: "button" | "submit" | "reset",
-  round?: boolean,
-  leadingIcon?: React.ComponentType<IconProps>,
-  ariaLabel?: string,
-  onClick?: () => void,
-}) {
+  ariaLabel,
+}: ButtonProps) {
   return (
     <button
       onClick={onClick}
       aria-label={ariaLabel}
       type={type}
-      className={`
-        ${styles['button']} 
-        ${className}
-      `}
-      style={{
-        borderRadius: round ? '50%' : '8px',
-      }}
+      className={`${styles['button']} ${className}`}
+      style={{ borderRadius: round ? '50%' : '8px' }}
     >
-      {LeadingIcon && <LeadingIcon className={leadingIconClassName} size={leadingIconSize} weight={leadingIconWeight} />}
+      {LeadingIcon && (
+        // Ícone da esquerda
+        <LeadingIcon
+          size={leadingIconSize}
+          color={leadingIconColor}
+          weight={leadingIconWeight}
+          className={leadingIconClassName}
+        />
+      )}
 
-      {Icon ? <Icon className={`${iconClassName} ${styles['icon']}`} size={20} color={iconColor} weight='bold' /> : <p className={inter.className}>{label}</p>}
+      {Icon ? (
+        // Ícone central ou label
+        <Icon
+          size={iconSize}
+          color={iconColor}
+          weight={iconWeight}
+          className={`${iconClassName} ${styles['icon']}`}
+        />
+      ) : (
+        <p className={inter.className}>{label}</p>
+      )}
 
-
+      {TrailingIcon && (
+        // Ícone da direita
+        <TrailingIcon
+          size={trailingIconSize}
+          color={trailingIconColor}
+          weight={trailingIconWeight}
+          className={trailingIconClassName}
+        />
+      )}
     </button>
   );
 }

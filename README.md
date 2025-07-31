@@ -15,7 +15,7 @@ Componentes reutilizáveis para projetos de desenvolvimento web do Sistema SCA q
     ou via SSH:
 
     ```sh
-    pnpm install git+https://github.com/ezboy4life/sca-web-kit.git
+    pnpm install git+git@github.com:ezboy4life/sca-web-kit.git
     ```
 
 2. Se o pacote foi instalado com sucesso, basta usar importar os componentes e usá-los em seu código:
