@@ -6,30 +6,50 @@ import Button from '../../ui/button/button';
 import Title from '../../ui/title/title';
 
 interface InfoHeaderProps {
-  tagLabel?: string;
-  title: string;
-  subtitle?: string;
-  iconSubtitle?: string;
-  buttonLabel?: string;
   className?: string;
+
+  tagLabel?: string;
+  tagLabelClassName?: string;
+
+  title: string;
   titleClassName?: string;
+
+  subtitle?: string;
   subtitleClassName?: string;
+
+  buttonLabel?: string;
+  buttonClassName?: string,
+
+  gap?: number,
   dark?: boolean;
 }
 
 export default function InfoHeader({
+  className,
+
   tagLabel,
+  tagLabelClassName,
+
   title,
+  titleClassName,
+
   subtitle,
+  subtitleClassName,
+
   buttonLabel,
-  className = '',
-  titleClassName = '',
-  subtitleClassName = '',
-  dark = false,
+  buttonClassName,
+
+  gap,
+  dark,
 }: InfoHeaderProps) {
   return (
-    <div className={`${styles['info-header']} ${className}`}>
-      {tagLabel && <TagLabel label={tagLabel} dark={dark} />}
+    <div
+      className={`${styles['info-header']} ${className}`}
+      style={{
+        gap: gap,
+      }}
+    >
+      {tagLabel && <TagLabel label={tagLabel} className={tagLabelClassName} dark={dark} />}
 
       <Title className={titleClassName} text={title} dark={dark} />
 
@@ -38,7 +58,7 @@ export default function InfoHeader({
       )}
 
       {buttonLabel && (
-        <Button label={buttonLabel} className={styles['button']} />
+        <Button label={buttonLabel} className={buttonClassName} />
       )}
     </div>
   );
