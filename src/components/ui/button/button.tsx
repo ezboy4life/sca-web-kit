@@ -85,7 +85,7 @@ export default function Button({
           size={iconSize}
           color={iconColor}
           weight={iconWeight}
-          className={`${iconClassName} ${styles['icon']}`}
+          className={iconClassName}
         />
       ) : (
         <p className={inter.className}>{label}</p>
