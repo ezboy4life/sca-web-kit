@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "assets"
+  ],
   "scripts": {
     "build": "tsc && cpy \"src/**/*.scss\" dist/ --parents",
     "prepare": "pnpm run build"

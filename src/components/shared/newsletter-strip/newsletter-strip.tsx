@@ -4,7 +4,6 @@ import { inter } from '../../../fonts';
 import InfoHeader from '../info-header/info-header';
 import Button from '../../ui/button/button';
 
-import Image from 'next/image';
 import { EnvelopeIcon } from '@phosphor-icons/react/dist/ssr';
 
 export default function NewsletterStrip() {
@@ -41,8 +40,8 @@ export default function NewsletterStrip() {
 
         <div className={styles['blue-hue']} />
 
-        <Image
-          src={'/logos/sca/sca-s-gradient.svg'}
+        <img
+          src='../../../../assets/logos/sca/sca-s-gradient.svg'
           alt='Logo do SCA'
           width={243}
           height={318}
