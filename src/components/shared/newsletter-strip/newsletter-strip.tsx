@@ -15,8 +15,8 @@ export default function NewsletterStrip(
     onFormSubmit,
   }: {
     buttonLabel?: string,
-    onButtonClick?: () => void,
-    onFormSubmit?: () => void,
+    onButtonClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    onFormSubmit?: (e: React.FormEvent<HTMLFormElement>) => void;
   }
 ) {
   return (
