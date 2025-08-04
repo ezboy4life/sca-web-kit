@@ -21,6 +21,7 @@ export { default as IndexHeader } from './components/shared/index-header/index-h
 export { default as SuccessCases } from './components/shared/success-cases/success-cases';
 export { default as FooterBanner } from './components/shared/footer-banner/footer-banner';
 export { default as NewsletterStrip } from './components/shared/newsletter-strip/newsletter-strip';
+export { default as NewsletterModal } from './components/shared/newsletter-modal/newsletter-modal';
 export { default as SupportStickyButton } from './components/shared/support-sticky-button/support-sticky-button';
 export { default as FooterBannerAutoplayer } from './components/shared/footer-banner-autoplayer/footer-banner-autoplayer';
 export { default as SuccessCasesSwiper } from './components/shared/success-cases/success-cases-swiper/success-cases-swiper';
