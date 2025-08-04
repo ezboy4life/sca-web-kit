@@ -1,7 +1,7 @@
 import styles from './newsletter-strip.module.scss';
 import { inter } from '../../../fonts';
 
-import SCAGradientLogo from 'sca-web-kit/assets/logos/sca/sca-s-gradient.svg';
+import scaGradientLogo from 'sca-web-kit/assets/logos/sca/sca-s-gradient.svg';
 
 import InfoHeader from '../info-header/info-header';
 import Button from '../../ui/button/button';
@@ -43,7 +43,7 @@ export default function NewsletterStrip() {
         <div className={styles['blue-hue']} />
 
         <img
-          src='../../../../assets/logos/sca/sca-s-gradient.svg'
+          src={scaGradientLogo}
           alt='Logo do SCA'
           width={243}
           height={318}
