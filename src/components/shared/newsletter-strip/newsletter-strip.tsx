@@ -8,7 +8,17 @@ import Button from '../../ui/button/button';
 
 import { EnvelopeIcon } from '@phosphor-icons/react/dist/ssr';
 
-export default function NewsletterStrip() {
+export default function NewsletterStrip(
+  {
+    buttonLabel,
+    onButtonClick,
+    onFormSubmit,
+  }: {
+    buttonLabel?: string,
+    onButtonClick?: () => void,
+    onFormSubmit?: () => void,
+  }
+) {
   return (
     <div className={styles['newsletter-strip']}>
       <div className={styles['left']}>
@@ -28,7 +38,7 @@ export default function NewsletterStrip() {
         />
       </div>
 
-      <div className={styles['right']}>
+      <form className={styles['right']} onSubmit={onFormSubmit}>
         <input
           className={`${styles['email']} ${inter.className}`}
           id="email"
@@ -38,7 +48,12 @@ export default function NewsletterStrip() {
           required
         />
 
-        <Button label='Assinar' className={styles['button']} />
+        <Button
+          className={styles['button']}
+          onClick={onButtonClick}
+          label={buttonLabel ?? "Assinar"}
+          type='submit'
+        />
 
         <div className={styles['blue-hue']} />
 
@@ -49,7 +64,7 @@ export default function NewsletterStrip() {
           height={318}
           className={styles['background-logo']}
         />
-      </div>
+      </form>
     </div>
   )
 }
