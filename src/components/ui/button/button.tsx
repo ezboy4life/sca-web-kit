@@ -86,7 +86,7 @@ export default function Button({
       style={{
         borderRadius: round ? '50%' : '8px',
         padding: round ? '8px' : '16px 42px',
-        cursor: loading ? 'not-allowed' : 'pointer',
+        cursor: disabled ? 'not-allowed' : 'pointer',
       }}
     >
       {LeadingIcon && (
