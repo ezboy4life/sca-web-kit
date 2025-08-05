@@ -23,6 +23,7 @@ export { default as FooterBanner } from './components/shared/footer-banner/foote
 export { default as NewsletterStrip } from './components/shared/newsletter-strip/newsletter-strip';
 export { default as NewsletterModal } from './components/shared/newsletter-modal/newsletter-modal';
 export { default as SupportStickyButton } from './components/shared/support-sticky-button/support-sticky-button';
+export { default as NewsletterModalDialog } from './components/shared/newsletter-modal-dialog/newsletter-modal-dialog'
 export { default as FooterBannerAutoplayer } from './components/shared/footer-banner-autoplayer/footer-banner-autoplayer';
 export { default as SuccessCasesSwiper } from './components/shared/success-cases/success-cases-swiper/success-cases-swiper';
 export { default as SuccessCaseCard } from './components/shared/success-cases/success-cases-swiper/success-case-card/success-case-card'
