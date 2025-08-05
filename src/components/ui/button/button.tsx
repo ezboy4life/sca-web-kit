@@ -1,10 +1,14 @@
 import styles from './button.module.scss';
 import { inter } from '../../../fonts';
 import { IconProps, IconWeight } from '@phosphor-icons/react';
+import { FadeLoader } from 'react-spinners';
 
 interface ButtonProps {
   label?: string,
   className?: string,
+
+  loading?: boolean,
+  loadingClassName?: string,
 
   icon?: React.ComponentType<IconProps>,
   iconSize?: number,
@@ -33,6 +37,10 @@ interface ButtonProps {
 export default function Button({
   label,
   className,
+
+  // Carregando (overwrite no ícone/label central caso true)
+  loading = false,
+  loadingClassName,
 
   // Ícone central
   icon: Icon,
@@ -82,17 +90,22 @@ export default function Button({
         />
       )}
 
-      {Icon ? (
-        // Ícone central ou label
-        <Icon
-          size={iconSize}
-          color={iconColor}
-          weight={iconWeight}
-          className={iconClassName}
+      {loading ?
+        <FadeLoader
+          className={loadingClassName}
         />
-      ) : (
-        <p className={inter.className}>{label}</p>
-      )}
+        : Icon ? (
+          // Ícone central ou label
+          <Icon
+            size={iconSize}
+            color={iconColor}
+            weight={iconWeight}
+            className={iconClassName}
+          />
+        ) : (
+          <p className={inter.className}>{label}</p>
+        )
+      }
 
       {TrailingIcon && (
         // Ícone da direita
