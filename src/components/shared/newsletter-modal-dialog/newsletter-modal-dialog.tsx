@@ -6,11 +6,13 @@ import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 
 export default function NewsletterModalDialog(
   {
+    modalType,
     open,
-    type,
+    setOpenAction,
   }: {
+    modalType: 'success' | 'already-registered' | 'error',
     open: boolean,
-    type: 'success' | 'already-registered' | 'error',
+    setOpenAction: React.Dispatch<React.SetStateAction<boolean>>,
   }
 ) {
   return (
@@ -23,7 +25,12 @@ export default function NewsletterModalDialog(
               <Dialog.Title>Tela de confirmação de inscrição na Newsletter do SCA</Dialog.Title>
             </VisuallyHidden>
 
-            <NewsletterModal type={type} />
+            <NewsletterModal
+              type={modalType}
+              onCloseButtonClick={() => {
+                setOpenAction(false)
+              }}
+            />
 
           </Dialog.Content>
 
