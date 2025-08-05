@@ -1,5 +1,9 @@
+'use client';
+
 import styles from './button.module.scss';
+
 import { inter } from '../../../fonts';
+
 import { IconProps, IconWeight } from '@phosphor-icons/react';
 import { PulseLoader } from 'react-spinners';
 
@@ -11,7 +15,6 @@ interface ButtonProps {
   loadingSize?: number,
   loadingColor?: string,
   loadingClassName?: string,
-
 
   icon?: React.ComponentType<IconProps>,
   iconSize?: number,
