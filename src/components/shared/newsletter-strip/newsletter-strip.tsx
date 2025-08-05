@@ -13,10 +13,16 @@ export default function NewsletterStrip(
     buttonLabel,
     onButtonClick,
     onFormSubmit,
+
+    buttonLoading = false,
+    buttonDisabled = false,
+
   }: {
     buttonLabel?: string,
     onButtonClick?: () => void;
     onFormSubmit?: (e: React.FormEvent<HTMLFormElement>) => void;
+    buttonLoading?: boolean;
+    buttonDisabled?: boolean;
   }
 ) {
   return (
@@ -52,6 +58,8 @@ export default function NewsletterStrip(
           className={styles['button']}
           onClick={onButtonClick}
           label={buttonLabel ?? "Assinar"}
+          loading={buttonLoading}
+          disabled={buttonDisabled}
           type='submit'
         />
 
