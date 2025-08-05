@@ -1,14 +1,17 @@
 import styles from './button.module.scss';
 import { inter } from '../../../fonts';
 import { IconProps, IconWeight } from '@phosphor-icons/react';
-import { FadeLoader } from 'react-spinners';
+import { PulseLoader } from 'react-spinners';
 
 interface ButtonProps {
   label?: string,
   className?: string,
 
   loading?: boolean,
+  loadingSize?: number,
+  loadingColor?: string,
   loadingClassName?: string,
+
 
   icon?: React.ComponentType<IconProps>,
   iconSize?: number,
@@ -32,6 +35,7 @@ interface ButtonProps {
   round?: boolean,
   onClick?: () => void,
   ariaLabel?: string,
+  disabled?: boolean,
 }
 
 export default function Button({
@@ -40,6 +44,8 @@ export default function Button({
 
   // Carregando (overwrite no ícone/label central caso true)
   loading = false,
+  loadingSize = 5,
+  loadingColor = 'white',
   loadingClassName,
 
   // Ícone central
@@ -68,16 +74,19 @@ export default function Button({
   round = false,
   onClick,
   ariaLabel,
+  disabled = false,
 }: ButtonProps) {
   return (
     <button
       onClick={onClick}
-      aria-label={ariaLabel}
       type={type}
+      disabled={disabled}
+      aria-label={ariaLabel}
       className={`${styles['button']} ${className}`}
       style={{
         borderRadius: round ? '50%' : '8px',
         padding: round ? '8px' : '16px 42px',
+        cursor: loading ? 'not-allowed' : 'pointer',
       }}
     >
       {LeadingIcon && (
@@ -91,7 +100,9 @@ export default function Button({
       )}
 
       {loading ?
-        <FadeLoader
+        <PulseLoader
+          size={loadingSize}
+          color={loadingColor}
           className={loadingClassName}
         />
         : Icon ? (
