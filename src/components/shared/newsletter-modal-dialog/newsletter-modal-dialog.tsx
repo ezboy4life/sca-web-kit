@@ -1,7 +1,8 @@
-import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import styles from './newsletter-modal-dialog.module.scss';
 import * as Dialog from '@radix-ui/react-dialog';
+
 import NewsletterModal from '../newsletter-modal/newsletter-modal';
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 
 export default function NewsletterModalDialog(
   {
