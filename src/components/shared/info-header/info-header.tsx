@@ -19,6 +19,9 @@ interface InfoHeaderProps {
 
   buttonLabel?: string;
   buttonClassName?: string,
+  buttonHref?: string,
+  buttonInternalHref?: string,
+  buttonTarget: React.HTMLAttributeAnchorTarget,
 
   gap?: number,
   dark?: boolean;
@@ -38,6 +41,9 @@ export default function InfoHeader({
 
   buttonLabel,
   buttonClassName,
+  buttonHref,
+  buttonInternalHref,
+  buttonTarget,
 
   gap,
   dark,
@@ -49,17 +55,37 @@ export default function InfoHeader({
         gap: gap,
       }}
     >
-      {tagLabel && <TagLabel label={tagLabel} className={tagLabelClassName} dark={dark} />}
+      {tagLabel &&
+        <TagLabel
+          label={tagLabel}
+          className={tagLabelClassName}
+          dark={dark}
+        />
+      }
 
-      <Title className={titleClassName} text={title} dark={dark} />
+      <Title
+        className={titleClassName}
+        text={title}
+        dark={dark}
+      />
 
-      {subtitle && (
-        <Subtitle text={subtitle} className={subtitleClassName} dark={dark} />
-      )}
+      {subtitle &&
+        <Subtitle
+          text={subtitle}
+          className={subtitleClassName}
+          dark={dark}
+        />
+      }
 
-      {buttonLabel && (
-        <Button label={buttonLabel} className={buttonClassName} />
-      )}
+      {buttonLabel &&
+        <Button
+          label={buttonLabel}
+          className={buttonClassName}
+          href={buttonHref}
+          internalHref={buttonInternalHref}
+          target={buttonTarget}
+        />
+      }
     </div>
-  );
+  )
 }

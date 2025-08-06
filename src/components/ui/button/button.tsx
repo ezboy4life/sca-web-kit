@@ -3,6 +3,7 @@ import { inter } from '../../../fonts';
 
 import { IconProps, IconWeight } from '@phosphor-icons/react';
 import { PulseLoader } from 'react-spinners';
+import Link from 'next/link';
 
 interface ButtonProps {
   label?: string,
@@ -31,6 +32,9 @@ interface ButtonProps {
   trailingIconWeight?: IconWeight,
   trailingIconClassName?: string,
 
+  href?: string;
+  internalHref?: string;
+  target?: React.HTMLAttributeAnchorTarget;
   type?: "button" | "submit" | "reset",
   round?: boolean,
   onClick?: () => void,
@@ -70,13 +74,17 @@ export default function Button({
   trailingIconClassName,
 
   // Etc
+  href,
+  internalHref,
+  target = '_blank',
   type,
   round = false,
   onClick,
   ariaLabel,
   disabled = false,
 }: ButtonProps) {
-  return (
+
+  const button = (
     <button
       onClick={onClick}
       type={type}
@@ -129,4 +137,6 @@ export default function Button({
       )}
     </button>
   );
+
+  return href ? <a href={href} target={target}>{button}</a> : internalHref ? <Link href={internalHref} target={target}>{button}</Link> : button;
 }
