@@ -76,7 +76,7 @@ export default function Button({
   // Etc
   href,
   internalHref,
-  target = '_blank',
+  target,
   type,
   round = false,
   onClick,
