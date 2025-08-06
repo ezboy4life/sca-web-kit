@@ -1,7 +1,4 @@
-'use client';
-
 import styles from './button.module.scss';
-
 import { inter } from '../../../fonts';
 
 import { IconProps, IconWeight } from '@phosphor-icons/react';
