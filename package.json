@@ -12,7 +12,6 @@
     "prepare": "pnpm run build",
     "prepack": "pnpm run build"
   },
-  "private": true,
   "peerDependencies": {
     "@phosphor-icons/react": "^2.1.10",
     "next": "^15.0.0",
