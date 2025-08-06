@@ -13,6 +13,8 @@ export default function FooterBanner() {
         tagLabel='ILIMITADO'
         title={'Não importa quantos alunos e alunas você vai ter, o preço não muda.'}
         buttonLabel='Conheça agora!'
+        buttonHref='https://app.sistemasca.com/cadastro'
+        buttonTarget='_blank'
         className={styles['footer-banner-info-header']}
         dark
       />
