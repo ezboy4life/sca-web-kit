@@ -23,7 +23,7 @@ interface InfoHeaderProps {
   buttonInternalHref?: string,
   buttonTarget?: React.HTMLAttributeAnchorTarget,
 
-  gap?: number,
+  gap?: string,
   dark?: boolean;
 }
 
