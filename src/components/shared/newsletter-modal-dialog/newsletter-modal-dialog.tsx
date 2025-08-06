@@ -1,3 +1,5 @@
+'use client';
+
 import styles from './newsletter-modal-dialog.module.scss';
 import * as Dialog from '@radix-ui/react-dialog';
 

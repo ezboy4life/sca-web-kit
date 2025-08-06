@@ -1,9 +1,9 @@
 import styles from './newsletter-modal.module.scss';
+
 import { montserrat } from '../../../fonts';
 
-import newsletterSuccessIcon from 'sca-web-kit/assets/icons/newsletter-success.svg';
 import newsletterErrorIcon from 'sca-web-kit/assets/icons/not-found.svg';
-
+import newsletterSuccessIcon from 'sca-web-kit/assets/icons/newsletter-success.svg';
 import Button from '../../ui/button/button';
 import { XIcon } from '@phosphor-icons/react/dist/ssr';
 
