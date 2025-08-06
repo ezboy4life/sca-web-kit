@@ -1,7 +1,7 @@
 import styles from './newsletter-strip.module.scss';
 import { inter } from '../../../fonts';
 
-import scaGradientLogo from 'sca-web-kit/assets/logos/sca/sca-s-gradient.svg';
+import scaGradientLogo from '@prosistemas/sca-web-kit/assets/logos/sca/sca-s-gradient.svg';
 
 import InfoHeader from '../info-header/info-header';
 import Button from '../../ui/button/button';

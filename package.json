@@ -1,5 +1,5 @@
 {
-  "name": "sca-web-kit",
+  "name": "@prosistemas/sca-web-kit",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "build": "tsc && cpy \"src/**/*.scss\" dist/ --parents",
-    "prepare": "pnpm run build"
+    "prepare": "pnpm run build",
+    "prepack": "pnpm run build"
   },
   "private": true,
   "peerDependencies": {
