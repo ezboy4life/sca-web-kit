@@ -1,10 +1,11 @@
 'use client';
 
 import styles from './newsletter-modal-dialog.module.scss';
-import * as Dialog from '@radix-ui/react-dialog';
 
 import NewsletterModal from '../newsletter-modal/newsletter-modal';
-import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
+
+import * as Dialog from '@radix-ui/react-dialog';
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 
 export default function NewsletterModalDialog(
   {
@@ -23,9 +24,9 @@ export default function NewsletterModalDialog(
         <Dialog.Overlay className={styles['overlay']}>
 
           <Dialog.Content>
-            <VisuallyHidden>
+            <VisuallyHidden.Root>
               <Dialog.Title>Tela de confirmação de inscrição na Newsletter do SCA</Dialog.Title>
-            </VisuallyHidden>
+            </VisuallyHidden.Root>
 
             <NewsletterModal
               type={modalType}
