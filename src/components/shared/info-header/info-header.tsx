@@ -1,15 +1,27 @@
 import styles from './info-header.module.scss';
 
 import TagLabel from '../../ui/tag-label/tag-label';
+import Title from '../../ui/title/title';
 import Subtitle from '../../ui/subtitle/subtitle';
 import Button from '../../ui/button/button';
-import Title from '../../ui/title/title';
+import { IconProps, IconWeight } from '@phosphor-icons/react';
 
 interface InfoHeaderProps {
   className?: string;
 
   tagLabel?: string;
   tagLabelClassName?: string;
+  tagLabelLeadingIcon?: React.ComponentType<IconProps>,
+  tagLabelLeadingIconSize?: number,
+  tagLabelLeadingIconColor?: string,
+  tagLabelLeadingIconWeight?: IconWeight,
+  tagLabelLeadingIconClassName?: string,
+
+  tagLabelTrailingIcon?: React.ComponentType<IconProps>,
+  tagLabelTrailingIconSize?: number,
+  tagLabelTrailingIconColor?: string,
+  tagLabelTrailingIconWeight?: IconWeight,
+  tagLabelTrailingIconClassName?: string,
 
   title: string;
   titleClassName?: string;
@@ -32,6 +44,16 @@ export default function InfoHeader({
 
   tagLabel,
   tagLabelClassName,
+  tagLabelLeadingIcon,
+  tagLabelLeadingIconSize,
+  tagLabelLeadingIconColor,
+  tagLabelLeadingIconWeight,
+  tagLabelLeadingIconClassName,
+  tagLabelTrailingIcon,
+  tagLabelTrailingIconSize,
+  tagLabelTrailingIconColor,
+  tagLabelTrailingIconWeight,
+  tagLabelTrailingIconClassName,
 
   title,
   titleClassName,
@@ -57,9 +79,21 @@ export default function InfoHeader({
     >
       {tagLabel &&
         <TagLabel
-          label={tagLabel}
           className={tagLabelClassName}
+          label={tagLabel}
           dark={dark}
+
+          leadingIcon={tagLabelLeadingIcon}
+          leadingIconSize={tagLabelLeadingIconSize}
+          leadingIconColor={tagLabelLeadingIconColor}
+          leadingIconWeight={tagLabelLeadingIconWeight}
+          leadingIconClassName={tagLabelLeadingIconClassName}
+
+          trailingIcon={tagLabelTrailingIcon}
+          trailingIconSize={tagLabelTrailingIconSize}
+          trailingIconColor={tagLabelTrailingIconColor}
+          trailingIconWeight={tagLabelTrailingIconWeight}
+          trailingIconClassName={tagLabelTrailingIconClassName}
         />
       }
 
