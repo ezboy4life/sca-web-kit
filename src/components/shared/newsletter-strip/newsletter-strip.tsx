@@ -35,10 +35,10 @@ export default function NewsletterStrip(
     buttonDisabled?: boolean;
 
     emailValue?: string,
-    emailOnChange?: React.ChangeEventHandler,
+    emailOnChange?: React.ChangeEventHandler<HTMLInputElement>,
 
     nameValue?: string,
-    nameOnChange?: React.ChangeEventHandler,
+    nameOnChange?: React.ChangeEventHandler<HTMLInputElement>,
   }
 ) {
   return (
