@@ -62,17 +62,6 @@ export default function NewsletterStrip(
 
       <form className={styles['right']} onSubmit={onFormSubmit}>
         <input
-          className={`${styles['email']} ${inter.className}`}
-          id="email"
-          type="email"
-          name="email"
-          placeholder="Insira seu e-mail"
-          value={emailValue}
-          onChange={emailOnChange}
-          required
-        />
-
-        <input
           className={`${styles['name']} ${inter.className}`}
           id="name"
           type="text"
@@ -80,6 +69,17 @@ export default function NewsletterStrip(
           placeholder="Insira seu nome"
           value={nameValue}
           onChange={nameOnChange}
+          required
+        />
+
+        <input
+          className={`${styles['email']} ${inter.className}`}
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Insira seu e-mail"
+          value={emailValue}
+          onChange={emailOnChange}
           required
         />
 
