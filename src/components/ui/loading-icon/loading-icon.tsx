@@ -18,11 +18,10 @@ export default function LoadingIcon(
   }) {
   return (
     <CircleNotchIcon
-      className={`${styles['loading-icon']} ${className}`}
+      className={`${styles['loading-icon']} ${className} ${spinning && styles['animated']}`}
       color={color}
       size={size}
       style={{
-        animation: spinning ? 'spin 1s linear infinite' : '',
         minWidth: `${size}px`,
         minHeight: `${size}px`,
       }}
