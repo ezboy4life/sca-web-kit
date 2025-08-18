@@ -57,8 +57,8 @@
       flex-direction: column;
     }
 
-    .email {
-      width: 335px;
+    .email,
+    .name {
       height: 55.5px;
 
       padding: 16px 24px;
@@ -74,6 +74,14 @@
       @media (max-width: 540px) {
         width: 100%;
       }
+    }
+
+    .email {
+      width: 335px;
+    }
+
+    .name {
+      width: 200px;
     }
 
     .button {
@@ -123,6 +131,4 @@
       z-index: 0;
     }
   }
-
-
 }

@@ -17,12 +17,28 @@ export default function NewsletterStrip(
     buttonLoading = false,
     buttonDisabled = false,
 
+    emailValue,
+    emailOnChange,
+
+    nameValue,
+    nameOnChange,
+    // email,
+    // setEmailAction,
+    // name,
+    // setNameAction,
   }: {
     buttonLabel?: string,
     onButtonClick?: () => void;
     onFormSubmit?: (e: React.FormEvent<HTMLFormElement>) => void;
+
     buttonLoading?: boolean;
     buttonDisabled?: boolean;
+
+    emailValue?: string,
+    emailOnChange?: React.ChangeEventHandler,
+
+    nameValue?: string,
+    nameOnChange?: React.ChangeEventHandler,
   }
 ) {
   return (
@@ -51,6 +67,19 @@ export default function NewsletterStrip(
           type="email"
           name="email"
           placeholder="Insira seu e-mail"
+          value={emailValue}
+          onChange={emailOnChange}
+          required
+        />
+
+        <input
+          className={`${styles['name']} ${inter.className}`}
+          id="name"
+          type="text"
+          name="text"
+          placeholder="Insira seu nome"
+          value={nameValue}
+          onChange={nameOnChange}
           required
         />
 
