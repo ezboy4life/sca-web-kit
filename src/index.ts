@@ -4,8 +4,9 @@ import './styles/variables.scss';
 export { default as Title } from './components/ui/title/title';
 export { default as Button } from './components/ui/button/button';
 export { default as Subtitle } from './components/ui/subtitle/subtitle';
-export { default as Accordion } from './components/ui/accordion/accordion';
 export { default as TagLabel } from './components/ui/tag-label/tag-label';
+export { default as Accordion } from './components/ui/accordion/accordion';
+export { default as LoadingIcon } from './components/ui/loading-icon/loading-icon';
 export { default as IconWithBackground } from './components/ui/icon-with-background/icon-with-background';
 
 // Shared
