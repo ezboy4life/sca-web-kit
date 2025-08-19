@@ -18,14 +18,10 @@ export default function NewsletterStrip(
     buttonDisabled = false,
 
     emailValue,
-    emailOnChange,
+    onEmailChange,
 
     nameValue,
-    nameOnChange,
-    // email,
-    // setEmailAction,
-    // name,
-    // setNameAction,
+    onNameChange,
   }: {
     buttonLabel?: string,
     onButtonClick?: () => void;
@@ -35,10 +31,10 @@ export default function NewsletterStrip(
     buttonDisabled?: boolean;
 
     emailValue?: string,
-    emailOnChange?: React.ChangeEventHandler<HTMLInputElement>,
+    onEmailChange?: React.ChangeEventHandler<HTMLInputElement>,
 
     nameValue?: string,
-    nameOnChange?: React.ChangeEventHandler<HTMLInputElement>,
+    onNameChange?: React.ChangeEventHandler<HTMLInputElement>,
   }
 ) {
   return (
@@ -68,7 +64,7 @@ export default function NewsletterStrip(
           name="text"
           placeholder="Insira seu nome"
           value={nameValue}
-          onChange={nameOnChange}
+          onChange={onNameChange}
           required
         />
 
@@ -79,7 +75,7 @@ export default function NewsletterStrip(
           name="email"
           placeholder="Insira seu e-mail"
           value={emailValue}
-          onChange={emailOnChange}
+          onChange={onEmailChange}
           required
         />
 
