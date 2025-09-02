@@ -4,6 +4,7 @@ import { montserrat } from '../../../fonts';
 
 import newsletterErrorIcon from '@prosistemas/sca-web-kit/assets/icons/not-found.svg';
 import newsletterSuccessIcon from '@prosistemas/sca-web-kit/assets/icons/newsletter-success.svg';
+
 import Button from '../../ui/button/button';
 import { XIcon } from '@phosphor-icons/react/dist/ssr';
 

@@ -4,14 +4,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import Button from '../../ui/button/button';
-import IconWithBackground from '../../ui/icon-with-background/icon-with-background';
+
+import FacebookLogo from '@prosistemas/sca-web-kit/assets/logos/social/facebook.svg';
+import InstagramLogo from '@prosistemas/sca-web-kit/assets/logos/social/instagram.svg';
+import YoutubeLogo from '@prosistemas/sca-web-kit/assets/logos/social/youtube.svg';
+import SCALogo from '@prosistemas/sca-web-kit/assets/logos/sca/sca-white.svg';
 
 import {
   EnvelopeIcon,
-  FacebookLogoIcon,
-  InstagramLogoIcon,
   PhoneIncomingIcon,
-  YoutubeLogoIcon
 } from '@phosphor-icons/react/dist/ssr';
 
 export default function Footer() {
@@ -23,7 +24,7 @@ export default function Footer() {
         <div className={styles['top-row']} >
           <div className={styles['sca']}>
             <Image
-              src={'/logos/sca/sca-white.svg'}
+              src={SCALogo}
               alt='Logo do Sistema SCA'
               width={100}
               height={50}
@@ -41,6 +42,7 @@ export default function Footer() {
               <p>Preços</p>
               <Link href='/equipamentos'><p>Equipamentos</p></Link>
             </div>
+
             <div className={styles['content-transparency-wrapper']}>
               <div className={styles['etc-content']}>
                 <p className={styles['title']}>Conteúdo</p>
@@ -53,6 +55,7 @@ export default function Footer() {
                 <Link href='/politica-de-privacidade'>Políticas e Privacidade</Link>
               </div>
             </div>
+
           </div>
 
         </div>
@@ -73,20 +76,42 @@ export default function Footer() {
               <EnvelopeIcon size={24} />
               <p>contato@sistemasca.com</p>
             </div>
+
             <div className={styles['social']}>
               <a href='https://www.instagram.com/sistemasca/' target='_blank'>
-                <IconWithBackground icon={InstagramLogoIcon} className={styles['icons']} iconSize={25} />
+                <img
+                  src={InstagramLogo}
+                  alt='Logo do SCA'
+                  width={32}
+                  height={32}
+                  className={styles['icons']}
+                />
               </a>
+
               <a href='https://www.facebook.com/sistemasca' target='_blank'>
-                <IconWithBackground icon={FacebookLogoIcon} className={styles['icons']} iconSize={25} weight='fill' />
+                <img
+                  src={FacebookLogo}
+                  alt='Logo do SCA'
+                  width={32}
+                  height={32}
+                  className={styles['icons']}
+                />
               </a>
+
               <a href='https://www.youtube.com/channel/UCZ8KRjnlnuw7XwJWTtnfliA' target='_blank'>
-                <IconWithBackground icon={YoutubeLogoIcon} className={styles['icons']} iconSize={25} weight='fill' />
+                <img
+                  src={YoutubeLogo}
+                  alt='Logo do SCA'
+                  width={32}
+                  height={32}
+                  className={styles['icons']}
+                />
               </a>
             </div>
           </div>
         </div>
       </div>
+
       <div className={styles['bottom']}>
         <p>Copyright © 2004 - {currentYear} Sistema SCA | ProSistemas - Todos os direitos reservados.</p>
       </div>
