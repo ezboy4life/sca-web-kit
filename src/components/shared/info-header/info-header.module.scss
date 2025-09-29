@@ -5,6 +5,15 @@
   align-items: center;
   text-align: center;
 
+  gap: 16px;
   z-index: 1;
-  gap: 32px;
+
+  .title,
+  .subtitle {
+    line-height: 1.5;
+  }
+
+  .button {
+    margin-top: 16px;
+  }
 }

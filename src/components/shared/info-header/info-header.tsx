@@ -79,7 +79,7 @@ export default function InfoHeader({
     >
       {tagLabel &&
         <TagLabel
-          className={tagLabelClassName}
+          className={`${tagLabelClassName} ${styles['tag-label']}`}
           label={tagLabel}
           dark={dark}
 
@@ -98,23 +98,23 @@ export default function InfoHeader({
       }
 
       <Title
-        className={titleClassName}
+        className={`${titleClassName} ${styles['title']}`}
         text={title}
         dark={dark}
       />
 
       {subtitle &&
         <Subtitle
+          className={`${subtitleClassName} ${styles['subtitle']}`}
           text={subtitle}
-          className={subtitleClassName}
           dark={dark}
         />
       }
 
       {buttonLabel &&
         <Button
+          className={`${buttonClassName} ${styles['button']}`}
           label={buttonLabel}
-          className={buttonClassName}
           href={buttonHref}
           internalHref={buttonInternalHref}
           target={buttonTarget}
