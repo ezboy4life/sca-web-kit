@@ -52,7 +52,7 @@
     position: relative;
     gap: 16px;
 
-    @media (max-width: 540px) {
+    @media (max-width: 768px) {
       width: 100%;
       flex-direction: column;
     }
@@ -71,8 +71,8 @@
 
       color: black;
 
-      @media (max-width: 540px) {
-        width: 100%;
+      @media (max-width: 768px) {
+        width: 100% !important;
       }
     }
 
@@ -90,7 +90,7 @@
       padding: 16px 48px;
       z-index: 1;
 
-      @media (max-width: 540px) {
+      @media (max-width: 768px) {
         width: 100%;
       }
     }
@@ -110,7 +110,7 @@
         transform-origin: bottom center;
       }
 
-      @media (max-width: 540px) {
+      @media (max-width: 768px) {
         display: none;
       }
     }
