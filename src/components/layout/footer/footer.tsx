@@ -79,7 +79,7 @@ export default function Footer() {
 
             <div className={styles['social']}>
               <a href='https://www.instagram.com/sistemasca/' target='_blank'>
-                <img
+                <Image
                   src={InstagramLogo}
                   alt='Logo do SCA'
                   width={32}
@@ -89,7 +89,7 @@ export default function Footer() {
               </a>
 
               <a href='https://www.facebook.com/sistemasca' target='_blank'>
-                <img
+                <Image
                   src={FacebookLogo}
                   alt='Logo do SCA'
                   width={32}
@@ -99,7 +99,7 @@ export default function Footer() {
               </a>
 
               <a href='https://www.youtube.com/channel/UCZ8KRjnlnuw7XwJWTtnfliA' target='_blank'>
-                <img
+                <Image
                   src={YoutubeLogo}
                   alt='Logo do SCA'
                   width={32}
