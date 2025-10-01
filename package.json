@@ -1,6 +1,6 @@
 {
   "name": "@prosistemas/sca-web-kit",
-  "version": "2.4.2",
+  "version": "2.5.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
