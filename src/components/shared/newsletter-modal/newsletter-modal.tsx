@@ -29,7 +29,7 @@ export default function NewsletterModal(
 
       <img
         src={type === "error" ? newsletterErrorIcon : newsletterSuccessIcon}
-        alt="TODO"
+        alt=""
         width={150}
         height={150}
         className={styles['icon']}

@@ -14,6 +14,3 @@ export { default as InfoHeader } from './components/shared/info-header/info-head
 export { default as NewsletterStrip } from './components/shared/newsletter-strip/newsletter-strip';
 export { default as NewsletterModal } from './components/shared/newsletter-modal/newsletter-modal';
 export { default as NewsletterModalDialog } from './components/shared/newsletter-modal-dialog/newsletter-modal-dialog'
-
-// Layout
-export { default as Footer } from './components/layout/footer/footer';
