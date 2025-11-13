@@ -2,9 +2,6 @@ import styles from './newsletter-modal.module.scss';
 
 import { montserrat } from '../../../fonts';
 
-import newsletterErrorIcon from '@prosistemas/sca-web-kit/assets/icons/not-found.svg';
-import newsletterSuccessIcon from '@prosistemas/sca-web-kit/assets/icons/newsletter-success.svg';
-
 import Button from '../../ui/button/button';
 import { XIcon } from '@phosphor-icons/react/dist/ssr';
 
@@ -12,9 +9,11 @@ export default function NewsletterModal(
   {
     onCloseButtonClick,
     type,
+    iconSrc,
   }: {
     onCloseButtonClick?: () => void,
     type: 'success' | 'already-registered' | 'error',
+    iconSrc: string,
   }
 ) {
   return (
@@ -28,7 +27,7 @@ export default function NewsletterModal(
       />
 
       <img
-        src={type === "error" ? newsletterErrorIcon : newsletterSuccessIcon}
+        src={iconSrc}
         alt=""
         width={150}
         height={150}

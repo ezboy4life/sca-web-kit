@@ -10,10 +10,12 @@ import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 export default function NewsletterModalDialog(
   {
     modalType,
+    iconSrc,
     open,
     setOpenAction,
   }: {
     modalType: 'success' | 'already-registered' | 'error',
+    iconSrc: string,
     open: boolean,
     setOpenAction: React.Dispatch<React.SetStateAction<boolean>>,
   }
@@ -29,6 +31,7 @@ export default function NewsletterModalDialog(
             </VisuallyHidden.Root>
 
             <NewsletterModal
+              iconSrc={iconSrc}
               type={modalType}
               onCloseButtonClick={() => {
                 setOpenAction(false)
