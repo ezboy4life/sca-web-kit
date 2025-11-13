@@ -1,12 +1,10 @@
 import styles from './newsletter-strip.module.scss';
-import { inter } from '../../../fonts';
 
 import scaGradientLogo from '@prosistemas/sca-web-kit/assets/logos/sca/sca-s-gradient.svg';
+import newsletterIcon from '@prosistemas/sca-web-kit/assets/icons/newsletter.svg';
 
 import InfoHeader from '../info-header/info-header';
 import Button from '../../ui/button/button';
-
-import { EnvelopeIcon } from '@phosphor-icons/react/dist/ssr';
 import Image from 'next/image';
 
 export default function NewsletterStrip(
@@ -40,26 +38,26 @@ export default function NewsletterStrip(
 ) {
   return (
     <div className={styles['newsletter-strip']}>
-      <div className={styles['left']}>
-        <EnvelopeIcon
-          color='white'
-          weight='light'
-          size={48}
-          className={styles['icon']}
-        />
+      <Image
+        className={styles['icon']}
+        src={newsletterIcon}
+        width={46}
+        height={46}
+        alt=''
+      />
 
-        <InfoHeader
-          title='Os melhores conteúdos de tecnologia e fitness'
-          subtitle='Assine e receba novidades toda semana em sua caixa de entrada.'
-          className={styles['feature-card']}
-          titleClassName={styles['feature-card-title']}
-          dark
-        />
-      </div>
+      <InfoHeader
+        className={styles['info-header']}
+        titleClassName={styles['title']}
+        subtitleClassName={styles['subtitle']}
+        title='Os melhores conteúdos de tecnologia e fitness'
+        subtitle='Assine e receba novidades toda semana em sua caixa de entrada.'
+        dark
+      />
 
-      <form className={styles['right']} onSubmit={onFormSubmit}>
+      <form className={styles['input-wrapper']} onSubmit={onFormSubmit} >
         <input
-          className={`${styles['name']} ${inter.className}`}
+          className={`${styles['name']} `}
           id="name"
           type="text"
           name="text"
@@ -70,7 +68,7 @@ export default function NewsletterStrip(
         />
 
         <input
-          className={`${styles['email']} ${inter.className}`}
+          className={`${styles['email']}`}
           id="email"
           type="email"
           name="email"
@@ -82,23 +80,27 @@ export default function NewsletterStrip(
 
         <Button
           className={styles['button']}
-          onClick={onButtonClick}
           label={buttonLabel ?? "Assinar"}
+          onClick={onButtonClick}
           loading={buttonLoading}
           disabled={buttonDisabled}
           type='submit'
         />
 
         <div className={styles['blue-hue']} />
-
-        <Image
-          src={scaGradientLogo}
-          alt='Logo do SCA'
-          width={243}
-          height={318}
-          className={styles['background-logo']}
-        />
       </form>
+
+      <div className={styles['background-logo']}>
+        <Image
+          className={styles['logo']}
+          src={scaGradientLogo}
+          width={335.5}
+          height={439.05}
+          alt=''
+        />
+
+        <div className={styles['hue']} />
+      </div>
     </div>
   )
 }
