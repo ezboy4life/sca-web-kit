@@ -1,6 +1,6 @@
 {
   "name": "@prosistemas/sca-web-kit",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
+    "@prosistemas/sca-web-kit": "link:",
     "@radix-ui/react-accordion": "^1.2.4",
     "@radix-ui/react-avatar": "^1.1.7",
     "@radix-ui/react-dialog": "^1.1.11",

@@ -12,13 +12,15 @@ export default function StyledAccordion({
   return (
     <Accordion.Root type="single" collapsible className={styles['accordion']}>
       <Accordion.Item value="item-1">
-        <Accordion.Header className={styles['accordion-header']}>
-          {question}
-          <Accordion.Trigger className={styles['trigger']} aria-label='Botão para encolher ou expandir a pergunta frequente'>
-            <PlusIcon size={20} color='white' weight='bold' className={styles['plus']} />
-            <MinusIcon size={20} color='white' weight='bold' className={styles['minus']} />
-          </Accordion.Trigger>
-        </Accordion.Header>
+        <Accordion.Trigger className={styles['open-button']} aria-label='Botão para encolher ou expandir a pergunta frequente'>
+          <Accordion.Header className={styles['accordion-header']}>
+            {question}
+            <div className={styles['trigger']}>
+              <PlusIcon size={20} color='white' weight='bold' className={styles['plus']} />
+              <MinusIcon size={20} color='white' weight='bold' className={styles['minus']} />
+            </div>
+          </Accordion.Header>
+        </Accordion.Trigger>
         <Accordion.Content className={styles['answer']}>{answer}</Accordion.Content>
       </Accordion.Item>
     </Accordion.Root>

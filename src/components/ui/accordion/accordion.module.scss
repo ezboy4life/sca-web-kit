@@ -14,63 +14,74 @@
     padding: 24px;
   }
 
-  .accordion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 64px;
+  .open-button {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--neutral600);
+    width: 100%;
+    cursor: pointer;
 
-    font-size: 18px;
-
-    @media (max-width: 425px) {
-      gap: 32px;
-    }
-
-    @media (max-width: 375px) {
-      gap: 24px;
-      font-size: 16px;
-    }
-
-    .trigger {
-      min-width: 32px;
-      min-height: 32px;
-      background: var(--auxiliary-orange);
-      border: none;
-      border-radius: 50%;
-
+    .accordion-header {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      cursor: pointer;
-      position: relative;
+      gap: 64px;
 
-      .plus,
-      .minus {
-        position: absolute;
-        transition: opacity 0.3s;
-      }
-    }
+      font-size: 18px;
 
-    .trigger[data-state="open"] {
-      .plus {
-        opacity: 0;
+      @media (max-width: 425px) {
+        gap: 32px;
       }
 
-      .minus {
-        opacity: 1;
-      }
-    }
-
-    .trigger[data-state="closed"] {
-      .plus {
-        opacity: 1;
+      @media (max-width: 375px) {
+        gap: 24px;
+        font-size: 16px;
       }
 
-      .minus {
-        opacity: 0;
+      .trigger {
+        min-width: 32px;
+        min-height: 32px;
+        background: var(--auxiliary-orange);
+        border: none;
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+
+        .plus,
+        .minus {
+          position: absolute;
+          transition: opacity 0.3s;
+        }
       }
+
     }
   }
+
+  .open-button[data-state="open"] {
+    .plus {
+      opacity: 0;
+    }
+
+    .minus {
+      opacity: 1;
+    }
+  }
+
+  .open-button[data-state="closed"] {
+    .plus {
+      opacity: 1;
+    }
+
+    .minus {
+      opacity: 0;
+    }
+  }
+
 
   .answer {
     font-size: 16px;
