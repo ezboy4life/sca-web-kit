@@ -11,9 +11,6 @@ importers:
       '@phosphor-icons/react':
         specifier: ^2.1.10
         version: 2.1.10(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@prosistemas/sca-web-kit':
-        specifier: 'link:'
-        version: 'link:'
       '@radix-ui/react-accordion':
         specifier: ^1.2.4
         version: 1.2.11(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
