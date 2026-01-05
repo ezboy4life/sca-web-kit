@@ -97,11 +97,7 @@
     height: 439.05px;
 
     @media (max-width: 768px) {
-      top: 50%;
-      left: 50%;
-
-      transform: translateY(-50%) translateX(-50%);
-      transform-origin: center;
+      display: none;
     }
 
     .logo {
