@@ -102,7 +102,12 @@
 
     .logo {
       position: absolute;
+      top: 130px;
+      left: 50px;
+
       z-index: 2;
+      scale: 275%;
+      transform-origin: left;
     }
 
     .hue {

@@ -1,6 +1,6 @@
 import styles from './newsletter-strip.module.scss';
 
-import scaGradientLogo from '@prosistemas/sca-web-kit/assets/logos/sca/sca-s-gradient.svg';
+import scaGradientLogo from '@prosistemas/sca-web-kit/assets/logos/sca/s-blur.svg';
 import newsletterIcon from '@prosistemas/sca-web-kit/assets/icons/newsletter.svg';
 
 import InfoHeader from '../info-header/info-header';
@@ -94,12 +94,9 @@ export default function NewsletterStrip(
         <Image
           className={styles['logo']}
           src={scaGradientLogo}
-          width={335.5}
-          height={439.05}
+          fill
           alt=''
         />
-
-        <div className={styles['hue']} />
       </div>
     </div>
   )
