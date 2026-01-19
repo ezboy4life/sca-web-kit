@@ -101,9 +101,9 @@
     }
 
     .logo {
-      position: absolute;
-      top: 130px;
-      left: 50px;
+      position: absolute !important;
+      top: 130px !important;
+      left: 50px !important;
 
       z-index: 2;
       scale: 275%;
