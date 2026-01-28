@@ -20,7 +20,7 @@ export default function Title(
   }
 ) {
   return (
-    <h1
+    <h2
       id={id}
       className={`${styles['title']} ${className} ${montserrat.className}`}
       style={{
@@ -30,6 +30,6 @@ export default function Title(
       }}
     >
       {text}
-    </h1>
+    </h2>
   )
 }
