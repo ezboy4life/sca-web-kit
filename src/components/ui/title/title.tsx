@@ -9,6 +9,7 @@ export default function Title(
     fontSize,
     fontWeight,
     dark = false,
+    h1 = false,
     id,
   }: {
     text: string,
@@ -16,11 +17,13 @@ export default function Title(
     fontSize?: string,
     fontWeight?: string,
     dark?: boolean,
+    h1?: boolean,
     id?: string,
   }
 ) {
+  const Tag = h1 ? 'h1' : 'h2';
   return (
-    <h2
+    <Tag
       id={id}
       className={`${styles['title']} ${className} ${montserrat.className}`}
       style={{
@@ -30,6 +33,6 @@ export default function Title(
       }}
     >
       {text}
-    </h2>
+    </Tag>
   )
 }
