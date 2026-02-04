@@ -1,6 +1,6 @@
 {
   "name": "@prosistemas/sca-web-kit",
-  "version": "3.3.9",
+  "version": "3.3.10",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -22,21 +22,21 @@
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
     "@prosistemas/sca-web-kit": "^3.3.8",
-    "@radix-ui/react-accordion": "^1.2.4",
-    "@radix-ui/react-avatar": "^1.1.7",
-    "@radix-ui/react-dialog": "^1.1.11",
-    "@radix-ui/react-dropdown-menu": "^2.1.6",
-    "@radix-ui/react-visually-hidden": "^1.2.2",
+    "@radix-ui/react-accordion": "^1.2.12",
+    "@radix-ui/react-avatar": "^1.1.11",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@radix-ui/react-visually-hidden": "^1.2.4",
     "react-spinners": "^0.17.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@eslint/eslintrc": "^3.3.3",
+    "@types/node": "^20.19.31",
+    "@types/react": "^19.2.11",
+    "@types/react-dom": "^19.2.3",
     "cpy-cli": "^5.0.0",
-    "eslint": "^9",
+    "eslint": "^9.39.2",
     "eslint-config-next": "15.2.2",
-    "typescript": "^5"
+    "typescript": "^5.9.3"
   }
 }
