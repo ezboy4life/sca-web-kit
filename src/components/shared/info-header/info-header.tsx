@@ -25,6 +25,7 @@ interface InfoHeaderProps {
 
   title: string;
   titleClassName?: string;
+  titleH1?: boolean;
 
   subtitle?: string;
   subtitleClassName?: string;
@@ -57,6 +58,7 @@ export default function InfoHeader({
 
   title,
   titleClassName,
+  titleH1 = false,
 
   subtitle,
   subtitleClassName,
@@ -99,6 +101,7 @@ export default function InfoHeader({
 
       <Title
         className={`${titleClassName} ${styles['title']}`}
+        h1={titleH1}
         text={title}
         dark={dark}
       />
