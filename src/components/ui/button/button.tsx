@@ -1,9 +1,9 @@
 import styles from './button.module.scss';
 import { inter } from '../../../fonts';
 
-import { IconProps, IconWeight } from '@phosphor-icons/react';
-import { PulseLoader } from 'react-spinners';
 import Link from 'next/link';
+import { PulseLoader } from 'react-spinners';
+import { IconProps, IconWeight } from '@phosphor-icons/react';
 
 interface ButtonProps {
   label?: string,
@@ -90,7 +90,7 @@ export default function Button({
       type={type}
       disabled={disabled}
       aria-label={ariaLabel}
-      className={`${styles['button']} ${className}`}
+      className={`${styles['button']} ${disabled && styles['disabled']} ${className}`}
       style={{
         borderRadius: round ? '50%' : '8px',
         padding: round ? '8px' : '16px 42px',
