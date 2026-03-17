@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
-    "@prosistemas/sca-web-kit": "^3.3.8",
+    "@prosistemas/sca-web-kit": "^3.3.12",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-avatar": "^1.1.11",
     "@radix-ui/react-dialog": "^1.1.15",
@@ -30,12 +30,12 @@
     "react-spinners": "^0.17.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.3",
-    "@types/node": "^20.19.31",
-    "@types/react": "^19.2.11",
+    "@eslint/eslintrc": "^3.3.5",
+    "@types/node": "^20.19.37",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "cpy-cli": "^5.0.0",
-    "eslint": "^9.39.2",
+    "eslint": "^9.39.4",
     "eslint-config-next": "15.2.2",
     "typescript": "^5.9.3"
   }
