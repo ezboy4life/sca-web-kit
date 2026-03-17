@@ -1,6 +1,7 @@
 import './styles/variables.scss';
 
 // UI
+export { default as Input } from './components/ui/input/input'
 export { default as Title } from './components/ui/title/title';
 export { default as Button } from './components/ui/button/button';
 export { default as Subtitle } from './components/ui/subtitle/subtitle';
