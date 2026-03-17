@@ -1,11 +1,17 @@
 import styles from './tag-label.module.scss';
 import { montserrat } from '../../../fonts';
+
+import Link from 'next/link';
 import { IconProps, IconWeight } from '@phosphor-icons/react';
+import { HTMLAttributeAnchorTarget } from 'react';
 
 interface TagLabelProps {
   label: string,
   className?: string,
   dark?: boolean,
+
+  href?: string,
+  target?: HTMLAttributeAnchorTarget,
 
   leadingIcon?: React.ComponentType<IconProps>,
   leadingIconSize?: number,
@@ -25,6 +31,9 @@ export default function TagLabel({
   className,
   dark,
 
+  href,
+  target,
+
   leadingIcon: LeadingIcon,
   leadingIconSize,
   leadingIconColor,
@@ -37,17 +46,8 @@ export default function TagLabel({
   trailingIconWeight,
   trailingIconClassName,
 }: TagLabelProps) {
-  const darkStyle = !dark ? {} : {
-    border: '1px solid var(--dark900)',
-    background: 'var(--dark800)',
-    color: 'white',
-  }
-
-  return (
-    <div
-      style={darkStyle}
-      className={`${styles['tag-label']} ${montserrat.className} ${className}`}
-    >
+  const content = (
+    <>
       {LeadingIcon && (
         // Ícone da esquerda
         <LeadingIcon
@@ -69,6 +69,36 @@ export default function TagLabel({
           className={trailingIconClassName}
         />
       )}
+    </>
+  )
+
+  if (href)
+    return (
+      <Link
+        href={href}
+        target={target}
+        className={`
+          ${styles['tag-label']}
+          ${styles['link']}
+          ${montserrat.className}
+          ${className}
+          ${dark && styles['dark']}
+        `}
+      >
+        {content}
+      </Link>
+    )
+
+  return (
+    <div
+      className={`
+        ${styles['tag-label']}
+        ${montserrat.className}
+        ${className}
+        ${dark && styles['dark']}
+      `}
+    >
+      {content}
     </div>
   )
 }

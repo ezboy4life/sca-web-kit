@@ -14,4 +14,20 @@
   color: var(--dark700);
   font-size: 14px;
   font-weight: 600;
+
+  transition: border .3s;
+}
+
+.link:hover {
+  border: 1px solid var(--light400);
+}
+
+.dark {
+  border: 1px solid var(--dark900);
+  background: var(--dark800);
+  color: white;
+}
+
+.dark:hover {
+  border: 1px solid var(--dark900);
 }

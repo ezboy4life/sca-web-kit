@@ -4,13 +4,18 @@ import TagLabel from '../../ui/tag-label/tag-label';
 import Title from '../../ui/title/title';
 import Subtitle from '../../ui/subtitle/subtitle';
 import Button from '../../ui/button/button';
+
 import { IconProps, IconWeight } from '@phosphor-icons/react';
+import { HTMLAttributeAnchorTarget } from 'react';
 
 interface InfoHeaderProps {
   className?: string;
 
   tagLabel?: string;
   tagLabelClassName?: string;
+  tagLabelHref?: string,
+  tagLabelTarget?: HTMLAttributeAnchorTarget,
+
   tagLabelLeadingIcon?: React.ComponentType<IconProps>,
   tagLabelLeadingIconSize?: number,
   tagLabelLeadingIconColor?: string,
@@ -22,6 +27,7 @@ interface InfoHeaderProps {
   tagLabelTrailingIconColor?: string,
   tagLabelTrailingIconWeight?: IconWeight,
   tagLabelTrailingIconClassName?: string,
+
 
   title: string;
   titleClassName?: string;
@@ -45,11 +51,15 @@ export default function InfoHeader({
 
   tagLabel,
   tagLabelClassName,
+  tagLabelHref,
+  tagLabelTarget,
+
   tagLabelLeadingIcon,
   tagLabelLeadingIconSize,
   tagLabelLeadingIconColor,
   tagLabelLeadingIconWeight,
   tagLabelLeadingIconClassName,
+
   tagLabelTrailingIcon,
   tagLabelTrailingIconSize,
   tagLabelTrailingIconColor,
@@ -84,6 +94,8 @@ export default function InfoHeader({
           className={`${tagLabelClassName} ${styles['tag-label']}`}
           label={tagLabel}
           dark={dark}
+          href={tagLabelHref}
+          target={tagLabelTarget}
 
           leadingIcon={tagLabelLeadingIcon}
           leadingIconSize={tagLabelLeadingIconSize}
