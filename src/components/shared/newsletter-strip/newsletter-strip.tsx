@@ -55,9 +55,10 @@ export default function NewsletterStrip(
         dark
       />
 
-      <form className={styles['input-wrapper']} onSubmit={onFormSubmit} >
+      <form className={styles['input-fields']} onSubmit={onFormSubmit} >
         <Input
-          inputClassName={styles['name']}
+          className={styles['input-wrapper']}
+          inputClassName={styles['input']}
           id='name'
           placeholder='Insira seu nome'
           onChange={onNameChange}
@@ -65,7 +66,8 @@ export default function NewsletterStrip(
         />
 
         <Input
-          inputClassName={styles['email']}
+          className={styles['input-wrapper']}
+          inputClassName={styles['input']}
           id='email'
           placeholder='Insira seu e-mail'
           onChange={onEmailChange}

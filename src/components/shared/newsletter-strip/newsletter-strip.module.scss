@@ -29,7 +29,7 @@
     }
   }
 
-  .input-wrapper {
+  .input-fields {
     width: 100%;
     padding: 0 100px;
 
@@ -55,26 +55,29 @@
       max-width: 415px;
     }
 
-
-    .name,
-    .email {
+    .input-wrapper {
       width: 100%;
-      height: 56px;
 
-      background: white;
-      outline: none;
+      .input {
+        height: 56px;
+        width: 100%;
 
-      border-radius: 8px;
-      color: var(--neutral700);
-      font-size: 14px;
-      padding: 0 24px;
+        background: white;
+        outline: none;
+
+        border-radius: 8px;
+        color: var(--neutral700);
+        font-size: 14px;
+        padding: 0 24px;
+      }
+
+      .input::placeholder {
+        color: var(--neutral500);
+        font-size: 14px;
+      }
     }
 
-    .name::placeholder,
-    .email::placeholder {
-      color: var(--neutral500);
-      font-size: 14px;
-    }
+
 
     .button {
       height: 56px;
