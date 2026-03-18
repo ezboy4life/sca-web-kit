@@ -79,16 +79,10 @@ export default function InfoHeader({
   buttonInternalHref,
   buttonTarget,
 
-  gap,
   dark,
 }: InfoHeaderProps) {
   return (
-    <div
-      className={`${styles['info-header']} ${className}`}
-      style={{
-        gap: gap,
-      }}
-    >
+    <div className={`${styles['info-header']} ${className}`}>
       {tagLabel &&
         <TagLabel
           className={`${tagLabelClassName} ${styles['tag-label']}`}

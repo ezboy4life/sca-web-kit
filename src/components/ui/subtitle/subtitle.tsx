@@ -13,10 +13,11 @@ export default function Subtitle(
 ) {
   return (
     <p
-      className={`${styles['subtitle']} ${className}`}
-      style={{
-        color: dark ? 'var(--neutral100)' : 'var(--neutral600)',
-      }}
+      className={`
+        ${styles['subtitle']}
+        ${dark && styles['dark']}
+        ${className}
+      `}
     >
       {text}
     </p>

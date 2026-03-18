@@ -1,8 +1,12 @@
-  .subtitle {
-    color: var(--neutral600);
-    font-weight: 400;
+.subtitle {
+  color: var(--neutral600);
+  font-weight: 400;
 
-    @media (max-width: 768px) {
-      font-size: 14px;
-    }
+  @media (max-width: 768px) {
+    font-size: 14px;
   }
+}
+
+.dark {
+  color: var(--neutral100);
+}
