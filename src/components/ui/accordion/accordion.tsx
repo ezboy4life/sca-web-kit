@@ -7,8 +7,8 @@ export default function StyledAccordion({
   answer,
   value,
 }: {
-  question: string,
-  answer: string,
+  question: React.ReactNode,
+  answer: React.ReactNode,
   value: string,
 }) {
   return (
