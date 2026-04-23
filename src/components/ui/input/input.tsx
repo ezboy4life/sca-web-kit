@@ -16,6 +16,7 @@ export default function Input(
     disabled,
     error,
     errorMsg,
+    maxLength,
     type = 'text',
     onChange,
   }: {
@@ -30,6 +31,7 @@ export default function Input(
     disabled?: boolean,
     error?: boolean,
     errorMsg?: string,
+    maxLength?: number,
     type?: HTMLInputTypeAttribute,
     onChange?: ChangeEventHandler<HTMLInputElement, HTMLInputElement>,
   }
@@ -58,6 +60,7 @@ export default function Input(
           defaultValue={defaultValue}
           type={inputType}
           onChange={onChange}
+          maxLength={maxLength}
         />
 
         {type === 'password' &&
