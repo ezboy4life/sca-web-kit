@@ -65,6 +65,7 @@ export default function Input(
 
         {type === 'password' &&
           <button
+            type='button'
             className={styles['reveal-password']}
             onClick={() => {
               if (inputType === 'text')
