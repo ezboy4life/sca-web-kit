@@ -3,11 +3,13 @@ import { inter } from '../../../fonts';
 
 import Link from 'next/link';
 import { PulseLoader } from 'react-spinners';
+import { CSSProperties } from 'react';
 import { IconProps, IconWeight } from '@phosphor-icons/react';
 
 interface ButtonProps {
   label?: string,
   className?: string,
+  style?: CSSProperties,
 
   loading?: boolean,
   loadingSize?: number,
@@ -45,6 +47,7 @@ interface ButtonProps {
 export default function Button({
   label,
   className,
+  style,
 
   // Carregando (overwrite no ícone/label central caso true)
   loading = false,
@@ -91,7 +94,7 @@ export default function Button({
       disabled={disabled}
       aria-label={ariaLabel}
       className={`${styles['button']} ${disabled && styles['disabled']} ${className}`}
-      style={{
+      style={style ? style : {
         borderRadius: round ? '50%' : '8px',
         padding: round ? '8px' : '16px 42px',
         cursor: disabled ? 'not-allowed' : 'pointer',

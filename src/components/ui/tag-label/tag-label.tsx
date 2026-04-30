@@ -3,11 +3,12 @@ import { montserrat } from '../../../fonts';
 
 import Link from 'next/link';
 import { IconProps, IconWeight } from '@phosphor-icons/react';
-import { HTMLAttributeAnchorTarget } from 'react';
+import { CSSProperties, HTMLAttributeAnchorTarget } from 'react';
 
 interface TagLabelProps {
   label: string,
   className?: string,
+  style?: CSSProperties,
   dark?: boolean,
 
   href?: string,
@@ -29,6 +30,7 @@ interface TagLabelProps {
 export default function TagLabel({
   label,
   className,
+  style,
   dark,
 
   href,
@@ -77,6 +79,7 @@ export default function TagLabel({
       <Link
         href={href}
         target={target}
+        style={style}
         className={`
           ${styles['tag-label']}
           ${styles['link']}
@@ -97,6 +100,7 @@ export default function TagLabel({
         ${className}
         ${dark && styles['dark']}
       `}
+      style={style}
     >
       {content}
     </div>
