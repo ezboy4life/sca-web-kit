@@ -10,6 +10,7 @@ export default function Input(
     placeholder,
     className,
     inputClassName,
+    value,
     defaultValue,
     autoFocus,
     required,
@@ -25,6 +26,7 @@ export default function Input(
     placeholder?: string,
     className?: string,
     inputClassName?: string,
+    value?: string | number | readonly string[],
     defaultValue?: string
     autoFocus?: boolean,
     required?: boolean,
@@ -57,6 +59,7 @@ export default function Input(
           autoFocus={autoFocus}
           required={required}
           disabled={disabled}
+          value={value}
           defaultValue={defaultValue}
           type={inputType}
           onChange={onChange}
