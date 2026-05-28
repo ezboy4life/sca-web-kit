@@ -21,7 +21,6 @@
     color: var(--neutral600);
     width: 100%;
     cursor: pointer;
-    transition: background .3s;
 
     .accordion-header {
       display: flex;
@@ -53,6 +52,7 @@
         align-items: center;
         cursor: pointer;
         position: relative;
+        transition: background .3s;
 
         .plus,
         .minus {
@@ -65,7 +65,11 @@
   }
 
   .open-button:hover {
-    background: var(--auxiliary-red);
+    .accordion-header {
+      .trigger {
+        background: var(--auxiliary-red);
+      }
+    }
   }
 
   .open-button[data-state="open"] {
