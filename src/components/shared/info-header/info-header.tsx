@@ -3,7 +3,6 @@ import styles from './info-header.module.scss';
 import TagLabel from '../../ui/tag-label/tag-label';
 import Title from '../../ui/title/title';
 import Subtitle from '../../ui/subtitle/subtitle';
-import Button from '../../ui/button/button';
 
 import { IconProps, IconWeight } from '@phosphor-icons/react';
 import { CSSProperties, HTMLAttributeAnchorTarget } from 'react';
@@ -29,7 +28,6 @@ interface InfoHeaderProps {
   tagLabelTrailingIconWeight?: IconWeight,
   tagLabelTrailingIconClassName?: string,
 
-
   title: string;
   titleClassName?: string;
   titleStyle?: CSSProperties,
@@ -39,13 +37,6 @@ interface InfoHeaderProps {
   subtitleClassName?: string;
   subtitleStyle?: CSSProperties,
 
-  buttonLabel?: string;
-  buttonClassName?: string,
-  buttonHref?: string,
-  buttonInternalHref?: string,
-  buttonTarget?: React.HTMLAttributeAnchorTarget,
-
-  gap?: string,
   dark?: boolean;
 }
 
@@ -79,12 +70,6 @@ export default function InfoHeader({
   subtitleClassName,
   subtitleStyle,
 
-  buttonLabel,
-  buttonClassName,
-  buttonHref,
-  buttonInternalHref,
-  buttonTarget,
-
   dark,
 }: InfoHeaderProps) {
   return (
@@ -116,9 +101,10 @@ export default function InfoHeader({
         className={`${titleClassName} ${styles['title']}`}
         style={titleStyle}
         h1={titleH1}
-        text={title}
         dark={dark}
-      />
+      >
+        {title}
+      </Title>
 
       {subtitle &&
         <Subtitle
@@ -126,16 +112,6 @@ export default function InfoHeader({
           style={subtitleStyle}
           text={subtitle}
           dark={dark}
-        />
-      }
-
-      {buttonLabel &&
-        <Button
-          className={`${buttonClassName} ${styles['button']}`}
-          label={buttonLabel}
-          href={buttonHref}
-          internalHref={buttonInternalHref}
-          target={buttonTarget}
         />
       }
     </div>
