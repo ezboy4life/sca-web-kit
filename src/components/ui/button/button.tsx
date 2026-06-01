@@ -1,145 +1,36 @@
 import styles from './button.module.scss';
-import { inter } from '../../../fonts';
-
-import Link from 'next/link';
-import { PulseLoader } from 'react-spinners';
-import { CSSProperties } from 'react';
-import { IconProps, IconWeight } from '@phosphor-icons/react';
+import { CSSProperties, MouseEventHandler } from 'react';
 
 interface ButtonProps {
-  label?: string,
-  className?: string,
-  style?: CSSProperties,
-
-  loading?: boolean,
-  loadingSize?: number,
-  loadingColor?: string,
-  loadingClassName?: string,
-
-  icon?: React.ComponentType<IconProps>,
-  iconSize?: number,
-  iconColor?: string,
-  iconWeight?: IconWeight,
-  iconClassName?: string,
-
-  leadingIcon?: React.ComponentType<IconProps>,
-  leadingIconSize?: number,
-  leadingIconColor?: string,
-  leadingIconWeight?: IconWeight,
-  leadingIconClassName?: string,
-
-  trailingIcon?: React.ComponentType<IconProps>,
-  trailingIconSize?: number,
-  trailingIconColor?: string,
-  trailingIconWeight?: IconWeight,
-  trailingIconClassName?: string,
-
-  href?: string;
-  internalHref?: string;
-  target?: React.HTMLAttributeAnchorTarget;
   type?: "button" | "submit" | "reset",
-  round?: boolean,
-  onClick?: () => void,
-  ariaLabel?: string,
+  style?: CSSProperties,
+  children: React.ReactNode,
   disabled?: boolean,
+  className?: string,
+  ariaLabel?: string,
+  onClick?: () => MouseEventHandler<HTMLButtonElement>,
 }
 
 export default function Button({
-  label,
-  className,
-  style,
-
-  // Carregando (overwrite no ícone/label central caso true)
-  loading = false,
-  loadingSize = 5,
-  loadingColor = 'white',
-  loadingClassName,
-
-  // Ícone central
-  icon: Icon,
-  iconSize,
-  iconColor,
-  iconWeight,
-  iconClassName,
-
-  // Ícone da esquerda
-  leadingIcon: LeadingIcon,
-  leadingIconSize,
-  leadingIconColor,
-  leadingIconWeight,
-  leadingIconClassName,
-
-  // Ícone da direita 
-  trailingIcon: TrailingIcon,
-  trailingIconSize,
-  trailingIconColor,
-  trailingIconWeight,
-  trailingIconClassName,
-
-  // Etc
-  href,
-  internalHref,
-  target,
   type,
-  round = false,
-  onClick,
+  style,
+  children,
+  disabled,
+  className,
   ariaLabel,
-  disabled = false,
+  onClick,
 }: ButtonProps) {
 
-  const button = (
+  return (
     <button
       onClick={onClick}
       type={type}
+      style={style}
       disabled={disabled}
       aria-label={ariaLabel}
       className={`${styles['button']} ${disabled && styles['disabled']} ${className}`}
-      style={style ? style : {
-        borderRadius: round ? '50%' : '8px',
-        padding: round ? '8px' : '16px 42px',
-        cursor: disabled ? 'not-allowed' : 'pointer',
-      }}
     >
-      {LeadingIcon && (
-        // Ícone da esquerda
-        <LeadingIcon
-          size={leadingIconSize}
-          color={leadingIconColor}
-          weight={leadingIconWeight}
-          className={leadingIconClassName}
-        />
-      )}
-
-      {loading ?
-        <PulseLoader
-          size={loadingSize}
-          color={loadingColor}
-          className={loadingClassName}
-        />
-        : Icon ? (
-          // Ícone central ou label
-          <Icon
-            size={iconSize}
-            color={iconColor}
-            weight={iconWeight}
-            className={iconClassName}
-          />
-        ) : (
-          <p className={inter.className}>{label}</p>
-        )
-      }
-
-      {TrailingIcon && (
-        // Ícone da direita
-        <TrailingIcon
-          size={trailingIconSize}
-          color={trailingIconColor}
-          weight={trailingIconWeight}
-          className={trailingIconClassName}
-        />
-      )}
+      {children}
     </button>
   );
-
-  return href ? <a href={href} target={target}>{button}</a> : internalHref ? <Link href={internalHref} target={target}>{button}</Link> : button;
 }
