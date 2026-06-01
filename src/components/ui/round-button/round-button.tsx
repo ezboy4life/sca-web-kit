@@ -11,7 +11,7 @@ interface RoundButtonProps {
   onClick?: () => void,
 }
 
-export default function Button({
+export default function RoundButton({
   type,
   style,
   children,
