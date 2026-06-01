@@ -4,14 +4,14 @@ import { CSSProperties } from 'react';
 
 export default function Title(
   {
-    text,
+    h1,
+    id,
     style,
     className,
-    dark = false,
-    h1 = false,
-    id,
+    dark,
+    children,
   }: {
-    text: string,
+    children: React.ReactNode,
     style?: CSSProperties,
     className?: string,
     fontSize?: string,
@@ -34,7 +34,7 @@ export default function Title(
         ${className} 
       `}
     >
-      {text}
+      {children}
     </Tag>
   )
 }
