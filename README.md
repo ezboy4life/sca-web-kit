@@ -1,10 +1,12 @@
 # SCA Web Kit
 
-Componentes reutilizáveis para projetos de desenvolvimento web do Sistema SCA que utilizam a framework [NextJS](https://nextjs.org/).
+Componentes reutilizáveis para projetos de desenvolvimento web do Sistema SCA
+que utilizam a framework [NextJS](https://nextjs.org/).
 
 ## Uso
 
-1. Em seu projeto com NextJS (versão >= 15.0), adicione o pacote através do seu gerenciador de pacotes:
+1. Em seu projeto com NextJS (versão >= 15.0), adicione o pacote através do seu
+gerenciador de pacotes:
 
     via HTTPS:
 
@@ -18,7 +20,8 @@ Componentes reutilizáveis para projetos de desenvolvimento web do Sistema SCA q
     pnpm install git+git@github.com:ezboy4life/sca-web-kit.git
     ```
 
-2. Se o pacote foi instalado com sucesso, basta usar importar os componentes e usá-los em seu código:
+2. Se o pacote foi instalado com sucesso, basta usar importar os componentes e
+usá-los em seu código:
 
     ```typescript
     import { Button } from 'sca-web-kit';
@@ -26,7 +29,7 @@ Componentes reutilizáveis para projetos de desenvolvimento web do Sistema SCA q
     export default function Home() {
         return (
             <div>
-                <Button label='Cadastrar' />
+                <Button>Cadastrar</Button> 
             </div>
         )
     }
