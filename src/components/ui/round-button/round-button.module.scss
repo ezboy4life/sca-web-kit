@@ -1,0 +1,25 @@
+.round-button {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: var(--auxiliary-orange);
+  border-radius: 50%;
+
+  color: #fff;
+  transition: background 0.3s, border 0.3s, opacity 0.3s;
+}
+
+.button:hover {
+  background: var(--auxiliary-red);
+}
+
+.disabled {
+  opacity: 0.5;
+}
