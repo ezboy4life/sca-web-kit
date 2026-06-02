@@ -5,14 +5,12 @@ export default function AccordionRoot(
     type = 'single',
     className,
     collapsible,
-
     children,
   }: {
-    type: 'single' | 'multiple',
-    className: string,
-    collapsible: boolean,
-
-    children: React.ReactNode,
+    type?: 'single' | 'multiple',
+    className?: string,
+    collapsible?: boolean,
+    children?: React.ReactNode,
   }
 ) {
   return (
