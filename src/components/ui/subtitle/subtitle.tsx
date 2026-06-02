@@ -3,12 +3,12 @@ import { CSSProperties } from 'react';
 
 export default function Subtitle(
   {
-    text,
+    children,
     style,
     className,
-    dark = false,
+    dark,
   }: {
-    text: string,
+    children: React.ReactNode,
     style?: CSSProperties,
     className?: string,
     dark?: boolean,
@@ -23,7 +23,7 @@ export default function Subtitle(
         ${className}
       `}
     >
-      {text}
+      {children}
     </p>
   )
 }
