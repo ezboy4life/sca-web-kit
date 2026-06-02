@@ -9,7 +9,7 @@ export { default as Button } from './components/ui/button/button';
 export { default as LinkButton } from './components/ui/link-button/link-button';
 export { default as RoundButton } from './components/ui/round-button/round-button';
 
-export { default as Accordion } from './components/ui/accordion/accordion';
+export { default as AccordionItem } from './components/ui/accordion-item/accordion-item';
 export { default as AccordionRoot } from './components/ui/accordion-root/accordion-root';
 
 export { default as TagLabel } from './components/ui/tag-label/tag-label';

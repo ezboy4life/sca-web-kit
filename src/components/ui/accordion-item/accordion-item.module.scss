@@ -1,6 +1,5 @@
-.accordion {
-  width: 100%;
-  min-height: 90px;
+.accordion-item {
+  width: auto;
 
   color: var(--neutral500);
   font-size: 16px;
@@ -14,7 +13,7 @@
     padding: 24px;
   }
 
-  .open-button {
+  .trigger {
     background: none;
     border: none;
     outline: none;
@@ -22,7 +21,9 @@
     width: 100%;
     cursor: pointer;
 
-    .accordion-header {
+    .header {
+      margin: unset;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -40,7 +41,7 @@
         font-size: 16px;
       }
 
-      .trigger {
+      .trigger-button {
         min-width: 32px;
         min-height: 32px;
         background: var(--auxiliary-orange);
@@ -56,6 +57,11 @@
 
         .plus,
         .minus {
+          color: white;
+          width: 20px;
+          height: 20px;
+          flex-shrink: 0;
+
           position: absolute;
           transition: opacity 0.3s;
         }
@@ -64,15 +70,15 @@
     }
   }
 
-  .open-button:hover {
-    .accordion-header {
-      .trigger {
+  .trigger:hover {
+    .header {
+      .trigger-button {
         background: var(--auxiliary-red);
       }
     }
   }
 
-  .open-button[data-state="open"] {
+  .trigger[data-state="open"] {
     .plus {
       opacity: 0;
     }
@@ -82,7 +88,7 @@
     }
   }
 
-  .open-button[data-state="closed"] {
+  .trigger[data-state="closed"] {
     .plus {
       opacity: 1;
     }
