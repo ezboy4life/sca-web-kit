@@ -7,6 +7,7 @@ export { default as Title } from './components/ui/title/title';
 export { default as Subtitle } from './components/ui/subtitle/subtitle';
 
 export { default as Button } from './components/ui/button/button';
+export { default as LinkButton } from './components/ui/link-button/link-button';
 export { default as RoundButton } from './components/ui/round-button/round-button';
 
 export { default as Accordion } from './components/ui/accordion/accordion';

@@ -1,0 +1,27 @@
+.link-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 16px 42px;
+  border-radius: 8px;
+  background: var(--auxiliary-orange);
+
+  color: #fff;
+  font-size: 16px;
+  font-variation-settings: 'wght' 600;
+  transition: background 0.3s, border 0.3s, opacity 0.3s;
+}
+
+.link-button:hover {
+  background: var(--auxiliary-red);
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
