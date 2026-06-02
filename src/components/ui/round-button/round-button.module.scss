@@ -16,10 +16,11 @@
   transition: background 0.3s, border 0.3s, opacity 0.3s;
 }
 
-.button:hover {
+.round-button:hover {
   background: var(--auxiliary-red);
 }
 
 .disabled {
   opacity: 0.5;
+  cursor: not-allowed;
 }
