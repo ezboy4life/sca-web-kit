@@ -110,9 +110,10 @@ export default function InfoHeader({
         <Subtitle
           className={`${subtitleClassName} ${styles['subtitle']}`}
           style={subtitleStyle}
-          text={subtitle}
           dark={dark}
-        />
+        >
+          {subtitle}
+        </Subtitle>
       }
     </div>
   )
