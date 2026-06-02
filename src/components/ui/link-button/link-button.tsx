@@ -2,11 +2,12 @@ import styles from './link-button.module.scss';
 
 import Link from 'next/link';
 
-import { CSSProperties, MouseEventHandler } from 'react';
+import { CSSProperties, HTMLAttributeAnchorTarget, MouseEventHandler } from 'react';
 
 interface LinkButtonProps {
   href: string,
   style?: CSSProperties,
+  target?: HTMLAttributeAnchorTarget,
   children: React.ReactNode,
   disabled?: boolean,
   className?: string,
@@ -17,6 +18,7 @@ interface LinkButtonProps {
 export default function LinkButton({
   href,
   style,
+  target,
   children,
   disabled,
   className,
@@ -28,6 +30,7 @@ export default function LinkButton({
     <Link
       href={href}
       style={style}
+      target={target}
       aria-label={ariaLabel}
       className={`${styles['link-button']} ${disabled && styles['disabled']} ${className}`}
       onClick={onClick}
