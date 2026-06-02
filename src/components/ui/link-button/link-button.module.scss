@@ -1,4 +1,6 @@
 .link-button {
+  width: fit-content;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,6 +16,7 @@
   color: #fff;
   font-size: 16px;
   font-variation-settings: 'wght' 600;
+  text-decoration: none;
   transition: background 0.3s, border 0.3s, opacity 0.3s;
 }
 
@@ -24,4 +27,5 @@
 .disabled {
   opacity: 0.5;
   cursor: not-allowed;
+  pointer-events: none;
 }
