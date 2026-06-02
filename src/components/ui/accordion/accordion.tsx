@@ -1,8 +1,8 @@
 import styles from './accordion.module.scss';
-import * as Accordion from '@radix-ui/react-accordion';
+import * as ReactAccordion from '@radix-ui/react-accordion';
 import { MinusIcon, PlusIcon } from '@phosphor-icons/react/dist/ssr';
 
-export default function StyledAccordion({
+export default function Accordion({
   question,
   answer,
   value,
@@ -12,18 +12,18 @@ export default function StyledAccordion({
   value: string,
 }) {
   return (
-    <Accordion.Item value={value} className={styles['accordion']} >
-      <Accordion.Trigger className={styles['open-button']} aria-label='Botão para encolher ou expandir a pergunta frequente'>
-        <Accordion.Header className={styles['accordion-header']}>
+    <ReactAccordion.Item value={value} className={styles['accordion']} >
+      <ReactAccordion.Trigger className={styles['open-button']} aria-label='Botão para encolher ou expandir a pergunta frequente'>
+        <ReactAccordion.Header className={styles['accordion-header']}>
           {question}
           <div className={styles['trigger']}>
             <PlusIcon size={20} color='white' weight='bold' className={styles['plus']} />
             <MinusIcon size={20} color='white' weight='bold' className={styles['minus']} />
           </div>
-        </Accordion.Header>
-      </Accordion.Trigger>
+        </ReactAccordion.Header>
+      </ReactAccordion.Trigger>
 
-      <Accordion.Content className={styles['answer']}>{answer}</Accordion.Content>
-    </Accordion.Item>
+      <ReactAccordion.Content className={styles['answer']}>{answer}</ReactAccordion.Content>
+    </ReactAccordion.Item>
   );
 }
