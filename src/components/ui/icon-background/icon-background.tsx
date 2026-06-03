@@ -1,4 +1,4 @@
-import styles from './icon-with-background.module.scss';
+import styles from './icon-background.module.scss';
 
 export default function IconBackground({
   children,
@@ -16,8 +16,8 @@ export default function IconBackground({
       className={`
           ${styles['background']} 
           ${className} 
-          ${round ? styles['round'] : ''}
-          ${dark ? styles['dark'] : ''}
+          ${round && styles['round']}
+          ${dark && styles['dark']}
         `}
     >
       {children}
