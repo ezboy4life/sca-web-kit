@@ -12,7 +12,7 @@ export { default as RoundButton } from './components/ui/round-button/round-butto
 export { default as AccordionItem } from './components/ui/accordion-item/accordion-item';
 export { default as AccordionRoot } from './components/ui/accordion-root/accordion-root';
 
-export { default as TagLabel } from './components/ui/tag-label/tag-label';
+export { default as Tag } from './components/ui/tag/tag';
 export { default as IconWithBackground } from './components/ui/icon-with-background/icon-with-background';
 
 export { default as Input } from './components/ui/input/input'
