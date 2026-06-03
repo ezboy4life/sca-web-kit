@@ -1,39 +1,26 @@
 import styles from './info-header.module.scss';
 
-import TagLabel from '../../ui/tag-label/tag-label';
+import Tag from '../../ui/tag/tag';
 import Title from '../../ui/title/title';
 import Subtitle from '../../ui/subtitle/subtitle';
 
-import { IconProps, IconWeight } from '@phosphor-icons/react';
 import { CSSProperties, HTMLAttributeAnchorTarget } from 'react';
 
 interface InfoHeaderProps {
   className?: string;
 
-  tagLabel?: string;
-  tagLabelClassName?: string;
-  tagLabelStyle?: CSSProperties,
-  tagLabelHref?: string,
-  tagLabelTarget?: HTMLAttributeAnchorTarget,
+  tag?: React.ReactNode;
+  tagClassName?: string;
+  tagStyle?: CSSProperties,
+  tagHref?: string,
+  tagTarget?: HTMLAttributeAnchorTarget,
 
-  tagLabelLeadingIcon?: React.ComponentType<IconProps>,
-  tagLabelLeadingIconSize?: number,
-  tagLabelLeadingIconColor?: string,
-  tagLabelLeadingIconWeight?: IconWeight,
-  tagLabelLeadingIconClassName?: string,
-
-  tagLabelTrailingIcon?: React.ComponentType<IconProps>,
-  tagLabelTrailingIconSize?: number,
-  tagLabelTrailingIconColor?: string,
-  tagLabelTrailingIconWeight?: IconWeight,
-  tagLabelTrailingIconClassName?: string,
-
-  title: string;
+  title: React.ReactNode;
   titleClassName?: string;
   titleStyle?: CSSProperties,
   titleH1?: boolean;
 
-  subtitle?: string;
+  subtitle?: React.ReactNode;
   subtitleClassName?: string;
   subtitleStyle?: CSSProperties,
 
@@ -43,23 +30,11 @@ interface InfoHeaderProps {
 export default function InfoHeader({
   className,
 
-  tagLabel,
-  tagLabelClassName,
-  tagLabelStyle,
-  tagLabelHref,
-  tagLabelTarget,
-
-  tagLabelLeadingIcon,
-  tagLabelLeadingIconSize,
-  tagLabelLeadingIconColor,
-  tagLabelLeadingIconWeight,
-  tagLabelLeadingIconClassName,
-
-  tagLabelTrailingIcon,
-  tagLabelTrailingIconSize,
-  tagLabelTrailingIconColor,
-  tagLabelTrailingIconWeight,
-  tagLabelTrailingIconClassName,
+  tag,
+  tagClassName,
+  tagStyle,
+  tagHref,
+  tagTarget,
 
   title,
   titleClassName,
@@ -74,27 +49,16 @@ export default function InfoHeader({
 }: InfoHeaderProps) {
   return (
     <div className={`${styles['info-header']} ${className}`}>
-      {tagLabel &&
-        <TagLabel
-          className={`${tagLabelClassName} ${styles['tag-label']}`}
-          style={tagLabelStyle}
-          label={tagLabel}
+      {tag &&
+        <Tag
+          className={`${tagClassName} ${styles['tag-label']}`}
+          style={tagStyle}
           dark={dark}
-          href={tagLabelHref}
-          target={tagLabelTarget}
-
-          leadingIcon={tagLabelLeadingIcon}
-          leadingIconSize={tagLabelLeadingIconSize}
-          leadingIconColor={tagLabelLeadingIconColor}
-          leadingIconWeight={tagLabelLeadingIconWeight}
-          leadingIconClassName={tagLabelLeadingIconClassName}
-
-          trailingIcon={tagLabelTrailingIcon}
-          trailingIconSize={tagLabelTrailingIconSize}
-          trailingIconColor={tagLabelTrailingIconColor}
-          trailingIconWeight={tagLabelTrailingIconWeight}
-          trailingIconClassName={tagLabelTrailingIconClassName}
-        />
+          href={tagHref}
+          target={tagTarget}
+        >
+          {tag}
+        </Tag>
       }
 
       <Title
