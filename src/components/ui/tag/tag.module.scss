@@ -18,6 +18,10 @@
   transition: border .3s;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .link:hover {
   border: 1px solid var(--light400);
 }
