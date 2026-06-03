@@ -13,7 +13,7 @@ export { default as AccordionItem } from './components/ui/accordion-item/accordi
 export { default as AccordionRoot } from './components/ui/accordion-root/accordion-root';
 
 export { default as Tag } from './components/ui/tag/tag';
-export { default as IconWithBackground } from './components/ui/icon-with-background/icon-with-background';
+export { default as IconBackground } from './components/ui/icon-background/icon-background';
 
 export { default as Input } from './components/ui/input/input'
 export { default as LoadingIcon } from './components/ui/loading-icon/loading-icon';
