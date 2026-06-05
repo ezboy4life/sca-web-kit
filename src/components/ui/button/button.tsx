@@ -8,7 +8,7 @@ interface ButtonProps {
   disabled?: boolean,
   className?: string,
   ariaLabel?: string,
-  onClick?: () => MouseEventHandler<HTMLButtonElement>,
+  onClick?: MouseEventHandler<HTMLButtonElement>,
 }
 
 export default function Button({
