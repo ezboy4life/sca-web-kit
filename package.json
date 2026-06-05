@@ -1,6 +1,6 @@
 {
   "name": "@prosistemas/sca-web-kit",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
+    "clsx": "^2.1.1",
     "react-spinners": "^0.17.0"
   },
   "devDependencies": {

@@ -5,6 +5,7 @@ import Title from '../../ui/title/title';
 import Subtitle from '../../ui/subtitle/subtitle';
 
 import { CSSProperties, HTMLAttributeAnchorTarget } from 'react';
+import { clsx } from 'clsx';
 
 interface InfoHeaderProps {
   className?: string;
@@ -48,10 +49,16 @@ export default function InfoHeader({
   dark,
 }: InfoHeaderProps) {
   return (
-    <div className={`${styles['info-header']} ${className}`}>
+    <div className={clsx(
+      className,
+      styles['info-header'],
+    )}>
       {tag &&
         <Tag
-          className={`${tagClassName} ${styles['tag-label']}`}
+          className={clsx(
+            tagClassName,
+            styles['tag-label'],
+          )}
           style={tagStyle}
           dark={dark}
           href={tagHref}
@@ -62,7 +69,10 @@ export default function InfoHeader({
       }
 
       <Title
-        className={`${titleClassName} ${styles['title']}`}
+        className={clsx(
+          titleClassName,
+          styles['title'],
+        )}
         style={titleStyle}
         h1={titleH1}
         dark={dark}
@@ -72,7 +82,10 @@ export default function InfoHeader({
 
       {subtitle &&
         <Subtitle
-          className={`${subtitleClassName} ${styles['subtitle']}`}
+          className={clsx(
+            subtitleClassName,
+            styles['subtitle'],
+          )}
           style={subtitleStyle}
           dark={dark}
         >

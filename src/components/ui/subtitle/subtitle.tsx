@@ -1,4 +1,5 @@
 import styles from './subtitle.module.scss';
+import { clsx } from 'clsx';
 import { CSSProperties } from 'react';
 
 export default function Subtitle(
@@ -17,11 +18,11 @@ export default function Subtitle(
   return (
     <p
       style={style}
-      className={`
-        ${styles['subtitle']}
-        ${dark && styles['dark']}
-        ${className}
-      `}
+      className={clsx(
+        className,
+        styles['subtitle'],
+        { [styles['dark']]: dark }
+      )}
     >
       {children}
     </p>

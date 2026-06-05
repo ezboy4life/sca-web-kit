@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import styles from './link-button.module.scss';
 
 import Link from 'next/link';
@@ -12,7 +13,7 @@ interface LinkButtonProps {
   disabled?: boolean,
   className?: string,
   ariaLabel?: string,
-  onClick?: () => MouseEventHandler<HTMLButtonElement>,
+  onClick?: MouseEventHandler<HTMLAnchorElement>,
 }
 
 export default function LinkButton({
@@ -32,10 +33,15 @@ export default function LinkButton({
       style={style}
       target={target}
       aria-label={ariaLabel}
-      className={`${styles['link-button']} ${disabled && styles['disabled']} ${className}`}
       onClick={onClick}
+      className={clsx(
+        className,
+        styles['link-button'],
+        { [styles['disabled']]: disabled },
+      )}
     >
       {children}
     </Link>
   );
 }
+

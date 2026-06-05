@@ -1,4 +1,5 @@
 import styles from './icon-background.module.scss';
+import { clsx } from 'clsx';
 
 export default function IconBackground({
   children,
@@ -13,12 +14,14 @@ export default function IconBackground({
 }) {
   return (
     <div
-      className={`
-          ${styles['background']} 
-          ${className} 
-          ${round && styles['round']}
-          ${dark && styles['dark']}
-        `}
+      className={clsx(
+        className,
+        styles['background'],
+        {
+          [styles['dark']]: dark,
+          [styles['round']]: round,
+        }
+      )}
     >
       {children}
     </div>

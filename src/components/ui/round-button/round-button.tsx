@@ -1,5 +1,6 @@
+import clsx from 'clsx';
 import styles from './round-button.module.scss';
-import { CSSProperties } from 'react';
+import { CSSProperties, MouseEventHandler } from 'react';
 
 interface RoundButtonProps {
   type?: "button" | "submit" | "reset",
@@ -8,7 +9,7 @@ interface RoundButtonProps {
   disabled?: boolean,
   className?: string,
   ariaLabel?: string,
-  onClick?: () => void,
+  onClick?: MouseEventHandler<HTMLButtonElement>,
 }
 
 export default function RoundButton({
@@ -28,9 +29,14 @@ export default function RoundButton({
       style={style}
       disabled={disabled}
       aria-label={ariaLabel}
-      className={`${styles['round-button']} ${disabled && styles['disabled']} ${className}`}
+      className={clsx(
+        className,
+        styles['round-button'],
+        { [styles['disabled']]: disabled }
+      )}
     >
       {children}
     </button>
   );
 }
+

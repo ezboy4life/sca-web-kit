@@ -1,5 +1,8 @@
 import styles from './title.module.scss';
+
+import { clsx } from 'clsx';
 import { montserrat } from '../../../fonts';
+
 import { CSSProperties } from 'react';
 
 export default function Title(
@@ -27,12 +30,12 @@ export default function Title(
     <Tag
       id={id}
       style={style}
-      className={`
-        ${styles['title']} 
-        ${montserrat.className}
-        ${dark && styles['dark']}
-        ${className} 
-      `}
+      className={clsx(
+        className,
+        styles['title'],
+        montserrat.className,
+        { [styles['dark']]: dark }
+      )}
     >
       {children}
     </Tag>

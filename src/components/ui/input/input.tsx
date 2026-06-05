@@ -1,6 +1,7 @@
 import styles from './input.module.scss';
 
 import { EyeIcon, EyeSlashIcon } from '@phosphor-icons/react/dist/ssr';
+import { clsx } from 'clsx';
 import { ChangeEventHandler, HTMLInputTypeAttribute, useState } from 'react';
 
 export default function Input(
@@ -41,7 +42,10 @@ export default function Input(
   const [inputType, setInputType] = useState<HTMLInputTypeAttribute | undefined>(type)
 
   return (
-    <div className={`${styles['input-wrapper']}  ${className}`}>
+    <div className={clsx(
+      className,
+      styles['input-wrapper'],
+    )}>
       {label &&
         <label className={styles['label']}>{label}</label>
       }
@@ -49,12 +53,12 @@ export default function Input(
       <div className={styles['wrapper']}>
         <input
           id={id}
-          className={`
-            ${styles['input']}
-            ${styles[type]}
-            ${inputClassName}
-            ${error && styles['input-error']}
-          `}
+          className={clsx(
+            inputClassName,
+            styles[type],
+            styles['input'],
+            { [styles['error']]: error },
+          )}
           placeholder={placeholder}
           autoFocus={autoFocus}
           required={required}

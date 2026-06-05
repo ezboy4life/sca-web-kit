@@ -1,5 +1,7 @@
 import styles from './button.module.scss';
+import { inter } from '../../../fonts';
 import { CSSProperties, MouseEventHandler } from 'react';
+import clsx from 'clsx';
 
 interface ButtonProps {
   type?: "button" | "submit" | "reset",
@@ -28,9 +30,15 @@ export default function Button({
       style={style}
       disabled={disabled}
       aria-label={ariaLabel}
-      className={`${styles['button']} ${disabled && styles['disabled']} ${className}`}
+      className={clsx(
+        className,
+        inter.className,
+        styles['button'],
+        { [styles['disabled']]: disabled },
+      )}
     >
       {children}
     </button>
   );
 }
+

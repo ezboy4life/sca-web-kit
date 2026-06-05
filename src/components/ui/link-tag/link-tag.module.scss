@@ -1,11 +1,12 @@
-.tag {
+.link-tag {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
 
-  background: var(--light100);
   width: fit-content;
+  text-decoration: none;
+  background: var(--light100);
 
   padding: 8px 16px;
   border: 1px solid var(--light200);
@@ -18,9 +19,16 @@
   transition: border .3s;
 }
 
+.link-tag:hover {
+  border: 1px solid var(--light400);
+}
+
 .dark {
   border: 1px solid var(--dark900);
   background: var(--dark800);
   color: white;
 }
 
+.dark:hover {
+  border: 1px solid var(--dark990);
+}

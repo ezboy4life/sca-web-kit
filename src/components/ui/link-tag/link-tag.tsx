@@ -1,20 +1,22 @@
-import styles from './tag.module.scss';
+import styles from './link-tag.module.scss';
+
+import { clsx } from 'clsx';
 import { montserrat } from '../../../fonts';
 
 import Link from 'next/link';
+import { Url } from 'next/dist/shared/lib/router/router';
 import { CSSProperties, HTMLAttributeAnchorTarget } from 'react';
-import { clsx } from 'clsx';
 
 interface TagProps {
   children: React.ReactNode,
   className?: string,
   style?: CSSProperties,
   dark?: boolean,
-  href?: string,
+  href: Url,
   target?: HTMLAttributeAnchorTarget,
 }
 
-export default function Tag({
+export default function LinkTag({
   children,
   className,
   style,
@@ -22,37 +24,20 @@ export default function Tag({
   href,
   target,
 }: TagProps) {
-
-  if (href)
-    return (
-      <Link
-        href={href}
-        target={target}
-        style={style}
-        className={clsx(
-          className,
-          styles['tag'],
-          styles['link'],
-          montserrat.className,
-          { [styles['dark']]: dark },
-        )}
-      >
-        {children}
-      </Link>
-    )
-
   return (
-    <div
+    <Link
+      href={href}
+      target={target}
       style={style}
       className={clsx(
         className,
-        styles['tag'],
+        styles['link-tag'],
         montserrat.className,
         { [styles['dark']]: dark },
       )}
     >
       {children}
-    </div>
+    </Link>
   )
 }
 

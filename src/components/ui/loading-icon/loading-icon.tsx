@@ -1,5 +1,6 @@
 'use client';
 
+import { clsx } from 'clsx';
 import styles from './loading-icon.module.scss';
 
 import { CircleNotchIcon } from '@phosphor-icons/react';
@@ -18,13 +19,17 @@ export default function LoadingIcon(
   }) {
   return (
     <CircleNotchIcon
-      className={`${styles['loading-icon']} ${className} ${spinning && styles['animated']}`}
       color={color}
       size={size}
       style={{
         minWidth: `${size}px`,
         minHeight: `${size}px`,
       }}
+      className={clsx(
+        styles['loading-icon'],
+        className,
+        { [styles['animated']]: spinning }
+      )}
     />
   )
 }
