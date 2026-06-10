@@ -7,12 +7,12 @@ import { CSSProperties } from 'react';
 
 export default function Title(
   {
-    h1,
-    id,
+    children,
     style,
     className,
+    heading = 'h2',
+    id,
     dark,
-    children,
   }: {
     children: React.ReactNode,
     style?: CSSProperties,
@@ -20,11 +20,11 @@ export default function Title(
     fontSize?: string,
     fontWeight?: string,
     dark?: boolean,
-    h1?: boolean,
+    heading?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6',
     id?: string,
   }
 ) {
-  const Tag = h1 ? 'h1' : 'h2';
+  const Tag = heading;
 
   return (
     <Tag
