@@ -19,7 +19,7 @@ interface InfoHeaderProps {
   title: React.ReactNode;
   titleClassName?: string;
   titleStyle?: CSSProperties,
-  titleH1?: boolean;
+  titleHeading?: 'h1' | 'h2' |'h3' |'h4' |'h5' |'h6';
 
   subtitle?: React.ReactNode;
   subtitleClassName?: string;
@@ -40,7 +40,7 @@ export default function InfoHeader({
   title,
   titleClassName,
   titleStyle,
-  titleH1 = false,
+  titleHeading = 'h2',
 
   subtitle,
   subtitleClassName,
@@ -73,8 +73,8 @@ export default function InfoHeader({
           titleClassName,
           styles['title'],
         )}
+        heading={titleHeading}
         style={titleStyle}
-        h1={titleH1}
         dark={dark}
       >
         {title}
