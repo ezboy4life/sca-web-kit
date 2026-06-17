@@ -1,7 +1,9 @@
+'use client';
+
 import styles from './input.module.scss';
+import { clsx } from 'clsx';
 
 import { EyeIcon, EyeSlashIcon } from '@phosphor-icons/react/dist/ssr';
-import { clsx } from 'clsx';
 import { ChangeEventHandler, HTMLInputTypeAttribute, useState } from 'react';
 
 export default function Input(
