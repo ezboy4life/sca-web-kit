@@ -4,7 +4,7 @@ import styles from './input.module.scss';
 import { clsx } from 'clsx';
 
 import { EyeIcon, EyeSlashIcon } from '@phosphor-icons/react/dist/ssr';
-import { ChangeEventHandler, HTMLInputTypeAttribute, useState } from 'react';
+import { ChangeEventHandler, HTMLInputTypeAttribute, KeyboardEventHandler, useState } from 'react';
 
 export default function Input(
   {
@@ -23,6 +23,7 @@ export default function Input(
     maxLength,
     type = 'text',
     onChange,
+    onKeyDown,
   }: {
     id?: string,
     label?: string,
@@ -39,6 +40,7 @@ export default function Input(
     maxLength?: number,
     type?: HTMLInputTypeAttribute,
     onChange?: ChangeEventHandler<HTMLInputElement, HTMLInputElement>,
+    onKeyDown?: KeyboardEventHandler<HTMLInputElement>,
   }
 ) {
   const [inputType, setInputType] = useState<HTMLInputTypeAttribute | undefined>(type)
@@ -67,9 +69,10 @@ export default function Input(
           disabled={disabled}
           value={value}
           defaultValue={defaultValue}
+          maxLength={maxLength}
           type={inputType}
           onChange={onChange}
-          maxLength={maxLength}
+          onKeyDown={onKeyDown}
         />
 
         {type === 'password' &&
