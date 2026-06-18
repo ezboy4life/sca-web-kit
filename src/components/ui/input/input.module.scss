@@ -26,16 +26,24 @@
       padding: 16px 24px;
       border: 1px solid var(--light200);
       border-radius: 8px;
-
       transition: border .3s;
     }
 
     .error {
-      border: 1px solid var(--auxiliary-red);
+      border: 1px solid var(--auxiliary-red) !important;
     }
 
     .input:hover {
       border: 1px solid var(--auxiliary-orange);
+    }
+
+    .input:focus {
+      border: 1px solid var(--light500);
+    }
+
+    .input:disabled {
+      cursor: not-allowed;
+      border: 1px solid var(--light200) !important;
     }
 
     .input::placeholder {
@@ -45,10 +53,6 @@
       line-height: 150%;
       text-overflow: ellipsis;
       min-width: 0;
-    }
-
-    .input:focus {
-      border: 1px solid var(--light500);
     }
 
     .password {
