@@ -3,99 +3,74 @@
 import styles from './input.module.scss';
 import { clsx } from 'clsx';
 
+import React, { useState, forwardRef } from 'react';
 import { EyeIcon, EyeSlashIcon } from '@phosphor-icons/react/dist/ssr';
-import { ChangeEventHandler, HTMLInputTypeAttribute, KeyboardEventHandler, useState } from 'react';
 
-export default function Input(
-  {
-    id,
-    label,
-    placeholder,
-    className,
-    inputClassName,
-    value,
-    defaultValue,
-    autoFocus,
-    required,
-    disabled,
-    error,
-    errorMsg,
-    maxLength,
-    type = 'text',
-    onChange,
-    onKeyDown,
-  }: {
-    id?: string,
-    label?: string,
-    placeholder?: string,
-    className?: string,
-    inputClassName?: string,
-    value?: string | number | readonly string[],
-    defaultValue?: string
-    autoFocus?: boolean,
-    required?: boolean,
-    disabled?: boolean,
-    error?: boolean,
-    errorMsg?: string,
-    maxLength?: number,
-    type?: HTMLInputTypeAttribute,
-    onChange?: ChangeEventHandler<HTMLInputElement, HTMLInputElement>,
-    onKeyDown?: KeyboardEventHandler<HTMLInputElement>,
-  }
-) {
-  const [inputType, setInputType] = useState<HTMLInputTypeAttribute | undefined>(type)
-
-  return (
-    <div className={clsx(
-      className,
-      styles['input-wrapper'],
-    )}>
-      {label &&
-        <label className={styles['label']}>{label}</label>
-      }
-
-      <div className={styles['wrapper']}>
-        <input
-          id={id}
-          className={clsx(
-            inputClassName,
-            styles[type],
-            styles['input'],
-            { [styles['error']]: error },
-          )}
-          placeholder={placeholder}
-          autoFocus={autoFocus}
-          required={required}
-          disabled={disabled}
-          value={value}
-          defaultValue={defaultValue}
-          maxLength={maxLength}
-          type={inputType}
-          onChange={onChange}
-          onKeyDown={onKeyDown}
-        />
-
-        {type === 'password' &&
-          <button
-            type='button'
-            className={styles['reveal-password']}
-            onClick={() => {
-              if (inputType === 'text')
-                setInputType('password');
-              else
-                setInputType('text');
-            }}
-          >
-            {inputType === 'password' && <EyeSlashIcon className={styles['icon']} size={22.5} />}
-            {inputType === 'text' && <EyeIcon className={styles['icon']} size={22.5} />}
-          </button>
-        }
-      </div>
-
-      {error && errorMsg &&
-        <p className={styles['error-message']}>{errorMsg}</p>
-      }
-    </div>
-  )
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
+  inputClassName?: string;
+  error?: boolean;
+  errorMsg?: string;
 }
 
+const Input = forwardRef<HTMLInputElement, InputProps>(
+  (
+    {
+      label,
+      className,
+      inputClassName,
+      error,
+      errorMsg,
+      type = 'text',
+      ...props
+    },
+    ref
+  ) => {
+    const [revealPassword, setRevealPassword] = useState(false);
+
+    const computedType = type === 'password' && revealPassword ? 'text' : type;
+
+    return (
+      <div className={clsx(className, styles['input-wrapper'])}>
+        {label && <label className={styles['label']}>{label}</label>}
+
+        <div className={styles['wrapper']}>
+          <input
+            {...props}
+            ref={ref}
+            type={computedType}
+            className={clsx(
+              inputClassName,
+              styles[type],
+              styles['input'],
+              { [styles['error']]: error }
+            )}
+          />
+
+          {type === 'password' && (
+            <button
+              type="button" // Important: explicitly type="button" to prevent accidental form submits!
+              className={styles['reveal-password']}
+              onClick={() => setRevealPassword((prev) => !prev)}
+              aria-label={revealPassword ? "Hide password" : "Show password"}
+            >
+              {revealPassword ? (
+                <EyeIcon className={styles['icon']} size={22.5} />
+              ) : (
+                <EyeSlashIcon className={styles['icon']} size={22.5} />
+              )}
+            </button>
+          )}
+        </div>
+
+        {error && errorMsg && (
+          <p className={styles['error-message']}>{errorMsg}</p>
+        )}
+      </div>
+    );
+  }
+);
+
+Input.displayName = 'Input';
+
+export default Input;
