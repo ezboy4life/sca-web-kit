@@ -1,4 +1,6 @@
 .input-wrapper {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -17,6 +19,7 @@
     position: relative;
 
     .input {
+      width: 100%;
       width: auto;
 
       font-family: Inter;
